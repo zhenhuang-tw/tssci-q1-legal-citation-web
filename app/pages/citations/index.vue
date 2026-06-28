@@ -37,7 +37,7 @@
           :id="anchorId(cat.code)"
           class="citation-category"
         >
-          <h2>{{ cat.name || cat.code }}</h2>
+          <h2>{{ cat.code }} {{ cat.name || '' }}</h2>
 
           <template v-if="cat.description">
             <p v-if="typeof cat.description === 'string'">{{ cat.description }}</p>

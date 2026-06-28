@@ -15,7 +15,7 @@
     </p>
 
     <!-- Format template -->
-    <blockquote v-if="rule.format && !rule.description">
+    <blockquote v-if="rule.format">
       <template v-if="Array.isArray(rule.format)">
         <p v-for="(f, i) in rule.format" :key="i">
           <CitationFormatBlock :format="f" />
@@ -28,52 +28,48 @@
 
     <!-- Examples -->
     <section v-if="hasExamples">
-      <details open>
-        <summary>範例</summary>
-        <!-- Simple examples -->
-        <ul v-if="Array.isArray(rule.example)">
-          <li v-for="(ex, i) in rule.example" :key="i">
+      <h4>範例</h4>
+      <ul v-if="Array.isArray(rule.example)">
+        <li v-for="(ex, i) in rule.example" :key="i">
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <span v-html="ex" />
+        </li>
+      </ul>
+      <ul v-else-if="typeof rule.example === 'string'">
+        <li>
+          <span v-html="rule.example" />
+        </li>
+      </ul>
+      <template v-else-if="typeof rule.example === 'object'">
+        <div v-for="(val, key) in rule.example" :key="key">
+          <strong>{{ key }}</strong>
+          <blockquote v-if="typeof val === 'string'">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <span v-html="ex" />
-          </li>
-        </ul>
-        <!-- Single string example -->
-        <ul v-else-if="typeof rule.example === 'string'">
-          <li>
-            <span v-html="rule.example" />
-          </li>
-        </ul>
-        <!-- Object examples (e.g., { "已出版博士論文": "...", "已出版有序言": "..." }) -->
-        <template v-else-if="typeof rule.example === 'object'">
-          <div v-for="(val, key) in rule.example" :key="key">
-            <strong>{{ key }}</strong>
-            <blockquote v-if="typeof val === 'string'">
+            <span v-html="val" />
+          </blockquote>
+          <ul v-else-if="Array.isArray(val)">
+            <li v-for="(ex, j) in val" :key="j">
               <!-- eslint-disable-next-line vue/no-v-html -->
-              <span v-html="val" />
-            </blockquote>
-            <ul v-else-if="Array.isArray(val)">
-              <li v-for="(ex, j) in val" :key="j">
-                <!-- eslint-disable-next-line vue/no-v-html -->
-                <span v-html="ex" />
-              </li>
-            </ul>
-          </div>
-        </template>
-      </details>
+              <span v-html="ex" />
+            </li>
+          </ul>
+        </div>
+      </template>
     </section>
 
     <!-- Multiple type examples -->
     <section v-if="rule.multipleTypeExample && rule.multipleTypeExample.length > 0">
-      <details open>
-        <summary>範例</summary>
-        <template v-for="(group, gi) in rule.multipleTypeExample" :key="gi">
-          <h4>{{ group.type }}</h4>
-          <ul>
-            <li v-for="(ex, ei) in group.example" :key="ei">{{ ex }}</li>
-          </ul>
-        </template>
-      </details>
+      <h4>範例</h4>
+      <template v-for="(group, gi) in rule.multipleTypeExample" :key="gi">
+        <h5>{{ group.type }}</h5>
+        <ul>
+          <li v-for="(ex, ei) in group.example" :key="ei">{{ ex }}</li>
+        </ul>
+      </template>
     </section>
+
+    <!-- Sub-rules rendered inline inside this card -->
+    <slot />
 
     <!-- Web note -->
     <footer v-if="rule.webNote">

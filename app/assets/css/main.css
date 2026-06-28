@@ -41,6 +41,16 @@ mark {
 }
 
 /* ---- RuleTree ---- */
+div[data-rule-tree] {
+  margin-bottom: 1rem;
+}
+
+div[data-rule-tree] > h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
 details[data-rule-tree] {
   margin-bottom: 0.75rem;
   border: 1px solid var(--pico-muted-border-color);
@@ -62,6 +72,13 @@ details[data-rule-tree] > summary::marker {
 
 details[data-rule-tree][open] > summary {
   margin-bottom: 0.5rem;
+}
+
+/* Mobile: generic details inside citation content */
+@media (max-width: 1023px) {
+  .citation-category details {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* ---- 語言篩選工具列 ---- */
