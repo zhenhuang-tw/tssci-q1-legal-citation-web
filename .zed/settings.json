@@ -1,0 +1,50 @@
+{
+  "formatter": {
+    "external": {
+      "command": "prettier",
+    },
+  },
+  "format_on_save": "on",
+  "languages": {
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+        },
+      },
+    },
+    "Vue.js": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+        },
+      },
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+        },
+      },
+    },
+    "CSS": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+        },
+      },
+    },
+    "Markdown": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+        },
+      },
+    },
+  },
+}
