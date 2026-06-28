@@ -1,12 +1,11 @@
 <template>
   <!-- Container node: has children, wrap in collapsible <details> -->
-  <details v-if="rule.rule" class="rule-tree-container">
+  <details v-if="rule.rule" data-rule-tree>
     <summary>
-      <span class="rule-code">{{ rule.code }}</span>
-      <span v-if="rule.name" class="rule-name">{{ rule.name }}</span>
+      <span>{{ rule.code }}</span>
+      <span v-if="rule.name">{{ rule.name }}</span>
     </summary>
 
-    <!-- Description for container nodes -->
     <p v-if="rule.description && rule.rule">
       <template v-if="Array.isArray(rule.description)">
         <template v-for="(line, i) in rule.description" :key="i">
@@ -23,7 +22,7 @@
     />
   </details>
 
-  <!-- Leaf: has format or example or multipleTypeExample → CitationCard -->
+  <!-- Leaf: has format or example or multipleTypeExample -> CitationCard -->
   <CitationCard
     v-else-if="
       rule.format !== undefined ||
@@ -33,8 +32,9 @@
     :rule="rule"
   />
 
-  <!-- Pure description rule: no name, no children, no examples → flat <p> -->
+  <!-- Pure description rule: no name, no children, no examples -> flat <p> -->
   <p v-else-if="rule.description">
+    {{ rule.code }}
     <template v-if="Array.isArray(rule.description)">
       <template v-for="(line, i) in rule.description" :key="i">
         {{ line }}<br v-if="i < rule.description.length - 1" />
