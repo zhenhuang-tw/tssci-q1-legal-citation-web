@@ -18,697 +18,1118 @@
       "〈7. 致謝〉一章未納入。"
     ]
   },
-  "1. 通則": {
-    "說明": [
-      "註解統一採頁註（footnote）格式，註腳請置於標點符號前。",
-      "投稿時不需檢附參考文獻。",
-      "為尊重原作者，引用文獻之標題、副標題或內容時，應與原作一致，避免擅自修正或調整原作者使用之文字、符號等。",
-      "撰稿者引用部分難以溯源之文獻時（如研討會文章等），為利期刊編輯查證，期刊編輯得要求撰稿者提供資料來源。",
-      "雖網頁資料變化快速，仍不建議撰稿者為使讀者溯源方便，而使用可將網頁永久性保存之工具（如perma.cc、archive.org等），以免侵害原作者之著作權。"
-    ]
-  },
-  "2. 中文文獻": {
-    "說明通則": [
-      "首次於內文中引用判決時應使用全稱，後續得簡化表示。",
-      "引用簡體中文文獻時應以原文呈現即可，無須改為繁體中文。",
-      "紀年：判決、行政機關函釋以民國紀年引用；其他期刊、書籍等文獻統一以西元紀年引用。",
-      "文獻時間之引註依國人閱讀習慣，順序以西元年、月、日呈現。如有需以「年/月/日」標示處，請以「YYYY/MM/DD」八位數字表示。",
-      "卷、期、頁等以阿拉伯數字呈現，不標註「第」字，如：37卷2期，頁55-57。"
-    ],
-    "文獻引用規則": {
-      "2.1 法條": {
-        "format": "{$law}第{$article}條第{$paragraph}項第{$item}款。",
-        "example": [
-          "憲法第27條第1項第1款。",
-          "民法第184條第1項前段。",
-          "民法第796條之1。"
-        ],
-        "備註": "完整表示，請勿使用簡稱或法條符號§。"
-      },
-      "2.2 憲法法庭判決及司法院大法官解釋": {
-        "format": "憲法法庭{$rocYear}年憲判字第{$number}號。或　司法院釋字第{$number}號。",
-        "example": [
-          "憲法法庭113年憲判字第10號。",
-          "司法院釋字第109號。",
-          "院台大二字第1100036313號。"
-        ],
-        "備註": "完整表示，字尾不需加「解釋」。引用司法院大法官會議議決不受理案件時，應引用完整發文字號。"
-      },
-      "2.3 行政函釋": {
-        "format": "{$agency}（{$rocYear}）年{$documentNumber}號函/令。或　{$agency}{$rocDate}{$documentNumber}號函/令。",
-        "example": [
-          "內政部（88）年臺內地字第8811978號函。",
-          "財政部98/12/11台財稅字第09800554670號令。"
-        ],
-        "備註": "依行政院各部發布之官方文件表示。如函釋中包含機關發布函釋之民國年、月、日，應統一以「民國年/月/日」表示。"
-      },
-      "2.4 法院裁判": {
-        "format": "{$court}{$rocYear}年度{$caseType}字第{$number}號{$judgmentType}。",
-        "example": {
-          "單一判決引用": [
-            "最高法院108年度台上字第1264號民事判決。",
-            "大理院統字第1070號解釋。",
-            "司法院院字第103號解釋。",
-            "最高法院解字第6號解釋。"
-          ],
-          "複數判決引用": [
-            "最高法院104年度台上字第1700號民事判決、106年度台上字第2428號民事判決、110年度台上字第3166號民事判決。",
-            "臺灣彰化地方法院110年度金訴字第85號刑事判決、臺灣高等法院臺中分院111年度金上訴字第1469號刑事判決、最高法院112年度台上字第2175號刑事判決。"
-          ]
+  "rule": [
+    {
+      "code": "1",
+      "name": "通則",
+      "rule": [
+        {
+          "code": "1.1",
+          "description": "註解統一採頁註（footnote）格式，註腳請置於標點符號前。"
         },
-        "備註": "完整表示，是否特別註明該裁判為「民事裁定、民事判決、刑事裁定或刑事判決」等，請以司法院裁判書查詢系統（https://judgment.judicial.gov.tw/FJUD/default_AD.aspx）為準。於同一註腳引用複數判決時，如該等判決由相同法院作成，得僅就第一則判決指明法院名稱及審級，以期精簡；若該等判決係由不同法院作成，則不得省略法院名稱及審級。"
-      },
-      "2.5 法院判例或決議": {
-        "format": "{$court}{$rocYear}年{$caseType}字第{$number}號{$judgmentType}。或　{$court}{$rocYear}年度第{$number}次{$meetingType}會議。",
-        "example": [
-          "最高法院81年台上字第3521號刑事判例。",
-          "最高法院91年度第14次民事庭會議。"
-        ],
-        "備註": "完整表示，不需加作成年月，並且判例不需標（舊）。"
-      },
-      "2.6 收錄於期刊之論文": {
-        "format": "{$author}，{$title}，{$journal}，{$volume}卷{$issue}期，頁{$page}，{$year}年。",
-        "example": "王皇玉，論施用毒品行為之犯罪化，臺大法學論叢，33卷6期，頁39-56，2004年。"
-      },
-      "2.7 收錄於專書之論文": {
-        "2.7.1 編者同作者": {
-          "format": "{$author}，{$title}，收於：{$bookTitle}，頁{$page}，{$year}年。",
-          "example": "王鵬翔，規則是法律推理的排它性理由嗎？，收於：2008法律思想與社會變遷，頁353-379，2008年。"
+        {
+          "code": "1.2",
+          "description": "投稿時不需檢附參考文獻。",
+          "webNote": "多數期刊（如臺北大學法學論叢）仍要求檢附，務請自行確認。"
         },
-        "2.7.2 編者非作者": {
-          "format": "{$author}，{$title}，收於：{$editor}編，{$bookTitle}，頁{$page}，{$year}年。",
-          "example": "林子儀，言論自由的限制與雙軌理論，收於：李鴻禧教授六秩華誕祝賀論文集編輯委員會編，現代國家與憲法—李鴻禧教授六秩華誕祝賀論文集，頁700，1997年。"
+        {
+          "code": "1.3",
+          "description": "為尊重原作者，引用文獻之標題、副標題或內容時，應與原作一致，避免擅自修正或調整原作者使用之文字、符號等。"
+        },
+        {
+          "code": "1.4",
+          "description": "撰稿者引用部分難以溯源之文獻時（如研討會文章等），為利期刊編輯查證，期刊編輯得要求撰稿者提供資料來源。"
+        },
+        {
+          "code": "1.5",
+          "description": "雖網頁資料變化快速，仍不建議撰稿者為使讀者溯源方便，而使用可將網頁永久性保存之工具（如perma.cc、archive.org等），以免侵害原作者之著作權。"
         }
-      },
-      "2.8 書籍或無具體篇名之文章": {
-        "說明": [
-          "未出版、線上發布之學術研究報告，如有出版頁者，亦依以下格式引用；無出版頁者，則依「2.15 網路文獻」格式引用。"
-        ],
-        "2.8.1 由個人獨立著作之書籍": {
-          "format": "{$author}，{$bookTitle}，{$edition}（初版無須註明），頁{$page}，{$year}年。",
-          "example": "王澤鑑，債法原理（一）：基本理論、債之發生，頁110-122，1999年。"
-        },
-        "2.8.2 由多人共同著作之書籍": {
-          "2.8.2.1 有編者但無篇名（如教科書、專論等）": {
-            "format": "{$editor}，{$bookTitle}，{$edition}（初版無須註明），頁{$page}（{$author}執筆），{$year}年。",
-            "example": "臺灣勞動法學會，勞動基準法釋義──施行40年之回顧與展望，頁642-657（林佳和執筆），2024年。"
-          },
-          "2.8.2.2 一位作者，並有續著/修訂/校訂者時": {
-            "format": "{$author1}（{$author2}續著［或其他書籍使用之動詞］），{$bookTitle}，{$edition}（初版無須註明），頁{$page}，{$year}年。",
-            "example": "邱聰智（姚志明校訂），新訂債法各論（上），頁23-30，2008年。"
-          },
-          "2.8.2.3 多人列為作者時": {
-            "format": "{$author1}、{$author2}，{$bookTitle}，{$edition}，頁{$page}，{$year}年。",
-            "example": "黃東熊、吳景芳，刑事訴訟法論（上），頁70-82，2004年。"
-          }
-        }
-      },
-      "2.9 研討會文章": {
-        "format": "{$author}，{$title}，{$conference}，{$organizer}主辦，頁{$page}，{$date}。",
-        "example": "廖福特，姓氏作為人格權—國際標準與國內實踐，第八屆「憲法解釋之理論與實務」學術研討會，中央研究院法律學研究所主辦，頁10，2011年12月9日。"
-      },
-      "2.10 碩博士論文": {
-        "format": "{$author}，{$title}，{$institution}（{$department}論文），頁{$page}，{$year}年。",
-        "example": "林子儀，國家從事公營事業之憲法基礎及界限，國立臺灣大學法律學研究所碩士論文，頁30，1983年。"
-      },
-      "2.11 翻譯書或文章": {
-        "format": "{$author}（{$translator}譯／{$reviser}修訂），{$bookTitle}，頁{$page}，{$year}年。",
-        "example": "Richard A. Epstein（簡資修譯），自由社會的原則，頁35-40，2003年。",
-        "備註": "作者姓名優先以原文標示，如出版社僅提供譯名，則可以譯名標示。"
-      },
-      "2.12 報紙": {
-        "說明": [
-          "無須區分紀實性報導或評論與特稿，統一使用以下格式。"
-        ],
-        "2.12.1 實體報紙": {
-          "format": "{$author}，{$title}，{$newspaper}，{$page}版，{$year}年{$month}月{$day}日。",
-          "example": "王奕琪，勞動節醫學生上街反過勞，大學報，A1版，2012年5月4日。"
-        },
-        "2.12.2 網路報紙": {
-          "format": "{$author}，{$title}，{$newspaper}，{$year}年{$month}月{$day}日，{$url}（最後瀏覽日：{$accessDate}）。",
-          "example": "高宛瑜，「油價漲也好」民眾：凍漲政府會內傷，聯合報，2012年4月1日，http://udn.com/NEWS/BREAKINGNEWS/BREAKINGNEWS3/7000607.shtml#ixzz1qnGvJ1u1（最後瀏覽日：2012/05/03）。"
-        }
-      },
-      "2.13 公報": {
-        "format": "{$gazetteName}，{$issueOrVolume}期，（{$book}），頁{$page}（若有），{$year}年。",
-        "example": [
-          "立法院公報，71卷101期，頁110，1982年。",
-          "總統府公報，7065號，頁28，2012年。"
-        ]
-      },
-      "2.14 前註": {
-        "format": "{$author}，註{$noteNumber}，頁{$page}（若引註頁碼與註X不同，則應註明）。",
-        "example": [
-          "湯德宗，註1。",
-          "湯德宗，註1，頁41。",
-          "湯德宗，台灣違憲審查制度之改革，註1，頁41。"
-        ],
-        "備註": "如註X中包含兩篇以上文章，則應於作者後標註指定篇名（如第三例）。"
-      },
-      "2.15 網路文獻": {
-        "說明": [
-          "未出版、線上發布之學術研究報告，如無出版頁者，亦依以下格式引用；有出版頁者，則依「2.8 書籍或無具體篇名之文章」格式引用。"
-        ],
-        "2.15.1 無提供Archive URL者": {
-          "format": "{$author}，{$title}，{$forumName}，{$year}年{$month}月{$day}日，{$url}（最後瀏覽日：{$accessDate}）。",
-          "example": "李建良，AI規範的歷史鏡象，臺灣人工智慧行動網，2020年2月19日，https://ai.iias.sinica.edu.tw/ai-regulation-history-reflection/（最後瀏覽日：2025/06/08）。"
-        },
-        "2.15.2 有提供Archive URL者": {
-          "format": "{$author}，{$title}，{$forumName}，{$year}年{$month}月{$day}日，{$url} [{$archiveUrl}]。",
-          "example": "邱文聰，〈澄社評論〉旺中仙貝，自由廣場，2012年2月3日，http://www.libertytimes.com.tw/2012/new/feb/3/today-o8.htm [https://web.archive.org/web/20120408141622/http://www.libertytimes.com.tw/2012/new/feb/3/today-o8.htm]。"
-        },
-        "2.15.3 先期電子出版文章": {
-          "format": "{$author}，{$title}，{$journal}，{$volume}卷{$issue}期，頁{$page}，{$year}年，{$url}（最後瀏覽日：{$accessDate}）。",
-          "example": "許家馨，應報即復仇？—當代應報理論及其對死刑之意涵初探，中研院法學期刊第15期，頁215-221，2014年，publication.iias.sinica.edu.tw/90501441.pdf（最後瀏覽日：2015/02/13）。"
-        }
-      }
-    }
-  },
-  "3. 英文文獻": {
-    "說明通則": [
-      "註腳位置依照中文之規定，置於標點符號前。惟如全文以英文撰寫，則註腳置於標點符號後。",
-      "於內文內引用之任何外文，應依原文呈現之大小寫方式，不予變更。",
-      "本格式所未規定者，請參照The Bluebook最新版次之規定。"
-    ],
-    "文獻引用規則": {
-      "3.1 法條和判決": {
-        "format": "依該國／該區域／該組織／該機關所提供之引註格式。但應包含必要之資訊。",
-        "example": [
-          "US: 28 U.S.C. § 1291 (2012).",
-          "Dobbs v. Jackson Women’s Health Organization, 597 U.S. 215 (2022).",
-          "UK: Human Rights Act 1998, s 15(1)(b).",
-          "For Women Scotland Ltd v. The Scottish Ministers [2025] UKSC 16.",
-          "UN: United Nations General Assembly, <span class=\"italic\">Restoration of the lawful rights of the People’s Republic of China in the United Nations</span>, GA Res 2758 (XXVI), UN Doc A/RES/2758(XXVI) (25 October 1971)."
-        ],
-        "備註": "超國家層級與國際公約、條約等規範文件依該組織／該機關所提供之引註格式。判決於本文及註腳引用時，均不須使用斜體。"
-      },
-      "3.2 書籍": {
-        "說明": [
-          "複數編者之引註方式同作者。初版書籍無須註明版次。"
-        ],
-        "3.2.1 一位作者": {
-          "format": "<span class=\"smallcaps\">{$author}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
-          "example": [
-            "<span class=\"smallcaps\">Mary Anne Franks, Fearless Speech: Breaking Free from the First Amendment</span> (2024).",
-            "<span class=\"smallcaps\">Catharine A. MacKinnon</span>, <span class=\"smallcaps\">Feminism Unmodified: Discourses on Life and Law</span> 34 (1987)."
-          ]
-        },
-        "3.2.2 二位作者": {
-          "format": "<span class=\"smallcaps\">{$authorA}</span> &amp; <span class=\"smallcaps\">{$authorB}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
-          "example": "（格式同一位作者，第二位作者前以「&」連接，全部作者姓名與書名均使用小型大寫字）"
-        },
-        "3.2.3 三位以上作者（以下兩種引用方式擇一）": {
-          "format": [
-            "<span class=\"smallcaps\">{$author}</span> <span class=\"smallcaps\">et al.</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
-            "<span class=\"smallcaps\">{$authorA}</span>, <span class=\"smallcaps\">{$authorB}</span> &amp; <span class=\"smallcaps\">{$authorC}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year})."
-          ],
-          "example": [
-            "Richard H. Fallon, Jr., John F. Manning, Daniel J. Meltzer &amp; David L. Shapiro, <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009).",
-            "Richard H. Fallon, Jr. et al., <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009)."
-          ]
-        }
-      },
-      "3.3 專書論文": {
-        "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, <span class=\"italic\">in</span> {$volume} <span class=\"smallcaps\">{$bookTitle}</span> {$startPage}, {$pinpointPage} ({$editor} ed., {$year}).",
-        "example": [
-          "Robin L. West, <span class=\"italic\">Law</span><span class=\"italic\">’s Sentiments</span><span class=\"italic\">, in</span> <span class=\"smallcaps\">Research Handbook on Law and Emotion</span> 44, 57 (Susan A. Bandes, Jody Lyneé Madeira, Kathryn D. Temple &amp; Emily Kidd White eds., 2021).",
-          "Kimberlé Crenshaw, <span class=\"italic\">Race, Reform, and Retrenchment: Transformation and Legitimation in Antidiscrimination Law, in</span> <span class=\"smallcaps\">Critical Race Theory: The Key Writings That Formed the Movement</span> 103 (Kimberlé Crenshaw et al. eds., 1996)."
-        ],
-        "備註": "編者有2位以上時，請用eds.。作（編）者有2位以上時，作（編）者表示方式同書籍之引註方式。"
-      },
-      "3.4 期刊論文": {
-        "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, {$volume} <span class=\"smallcaps\">{$journalAbbrev}</span> {$startPage}, {$pinpointPage} ({$year}).",
-        "example": [
-          "Charles A. Reich, <span class=\"italic\">The New Property</span>, 73 <span class=\"smallcaps\">Yale L.J.</span> 733, 737-38 (1964).",
-          "Reva B. Siegel, “<span class=\"italic\">The Rule of Love</span>”<span class=\"italic\">: Wife Beating as Prerogative and Privacy,</span> 105 <span class=\"smallcaps\">Yale L. J.</span> 2117 (1995)."
-        ],
-        "備註": "作者有2位以上時，作者表示方式同書籍之引註方式，但無須小型大寫字。期刊名稱必須縮寫並使用小型大寫字。"
-      },
-      "3.5 前註": {
-        "format": "{$authorSurname}, <span class=\"italic\">supra</span> note {$noteNumber}, at {$pinpointPage}.",
-        "example": "Vogel, <span class=\"italic\">supra</span> note 10, at 1020, 1040-43, 1050.",
-        "備註": "作者姓字體和該註首次出現時作者名稱字體相同：例如引用書籍時作者姓名即用小型大寫字，期刊論文作者姓名則為一般體。"
-      },
-      "3.6 報紙": {
-        "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, <span class=\"smallcaps\">{$newspaper}</span>, {$date}, at {$page}.",
-        "example": "Ari L. Goldman, <span class=\"italic\">“O</span><span class=\"italic\">’Connor Warns Politicians Risk Excommunication over Abortion</span><span class=\"italic\">”</span>, <span class=\"smallcaps\">The New York Times</span>, 1990/06/15, at A1.",
-        "備註": "日期格式為YYYY/MM/DD。"
-      },
-      "3.7 翻譯書": {
-        "format": "<span class=\"smallcaps\">{$author}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$editor} ed., {$translator} trans., {$edition} {$translationYear}) ({$originalYear}).",
-        "example": [
-          "Michel Foucault, Discipline and Punish 30-31 (Alan Sheridan trans., 2nd ed. 1995) (1975).",
-          "Karl Marx &amp; Frederich Engels, The Communist Manifesto (Joseph Katz ed., Samuel Moore trans., 1964) (1848)."
-        ]
-      },
-      "3.8 即將出版之論文": {
-        "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, {$volume} <span class=\"smallcaps\">{$journalAbbrev}</span> (forthcoming).",
-        "example": "Thomas W. Merrill &amp; Henry E. Smith, <span class=\"italic\">Making</span> <span class=\"italic\">Coasean</span> <span class=\"italic\">Property More</span> <span class=\"italic\">Coasean</span>, J.L. &amp; Econ. (forthcoming)."
-      },
-      "3.9 網路文獻": {
-        "說明": [
-          "該網站本身會持續更新資訊，則放上last visited，該引用文獻本身有發表時間則不須。",
-          "如文獻屬於working paper，則無須列出working paper系列名稱及編號。"
-        ],
-        "3.9.1 一般網路文獻": {
-          "format": "{$author} [如適用], <span class=\"italic\">{$articleTitle}</span> [如適用], <span class=\"smallcaps\">{$siteName}</span> ({$date} [如適用]), {$url} (last visited {$accessDate} [如適用]).",
-          "example": [
-            "<span class=\"italic\">Our Stories</span>, We Can’t Consent To This, https://wecantconsenttothis.uk/our-stories (last visited 2025/04/17).",
-            "Daniel Davies, <span class=\"italic\">Supreme Court gender ruling 'significant for services'</span>, BBC News (2025/04/29), https://www.bbc.com/news/articles/czrvjg3k07ro.",
-            "<span class=\"italic\">Statement on President Trump</span><span class=\"italic\">’s Executive Order to Return Power Over Education to States and Local Communities</span>, U.S. Department of Education (2025/03/20), https://www.ed.gov/about/news/press-release/statement-president-trumps-executive-order-return-power-over-education-states-and-local-communities.",
-            "Linda Greenhouse, <span class=\"italic\">The New Anti-Abortion Argument Takes Us Back to the 19th Century</span>, The New York Times (2024/11/18), https://www.nytimes.com/2024/11/18/opinion/abortion-medication-courts.html.",
-            "Scott Shapiro (@scottjshapiro), X (2023/10/05, 8:48 PM), https://x.com/scottjshapiro/status/1709913561693114481."
-          ]
-        },
-        "3.9.2 working paper範例": {
-          "format": "{$author}, <span class=\"italic\">{$title}</span> {$page}, {$repository} ({$date}), {$url}.",
-          "example": "Jens Frankenreiter, Talia B. Gillis &amp; Eric L. Talley, <span class=\"italic\">Sex &amp; Startups</span> 25–29, SSRN (2025/06/18), https://ssrn.com/abstract=4730878."
-        }
-      }
-    }
-  },
-  "4. 德文文獻": {
-    "說明通則": [
-      "德文註腳均不需斜體。",
-      "同一文獻有多位作者或編者時，應全部列出。",
-      "同一文獻有多位作者或編者時，「/」與英文「&」同義，其前後不加空白鍵。",
-      "期刊名稱應用縮寫，書名依習慣得用縮寫。",
-      "文獻之作者與編者，均僅呈現姓氏，如姓氏相同，再標示名字。"
-    ],
-    "文獻引用規則": {
-      "4.1 法條": {
-        "format": "Art./§ {$article} {$paragraphRoman} {$abbrev} {$law}",
-        "example": [
-          "Art. 25 S. 2 HS. 2 GG",
-          "Art. 2 I i.V.m. Art. 1 I GG",
-          "Art. 12 II und III GG",
-          "Art. 13 II bis V, VII GG",
-          "§§ 97, 98 StPO",
-          "§ 100g II S. 2 Nr. 1 lit. a StPO"
-        ],
-        "備註": "依各法典習慣，分別採用§與Art.。項次以羅馬數字（Ⅰ, Ⅱ, Ⅲ, Ⅳ…）表示。其餘資訊（如款、目、句、分句），則以德文縮寫方式呈現。增修條文如§ 100a II Nr. 5a StPO，a之前不加空格。"
-      },
-      "4.2 判決": {
-        "format": "{$court}, {$decisionType} {$date} - {$caseNumber} -, Rn. {$pinpoint}.",
-        "example": {
-          "單一判決引用範例": [
-            "BVerfG, Beschluss des Zweiten Senats vom 17. März 2025 - 2 BvE 7/25 -, Rn. 1-7.",
-            "OLG München, Urteil v. 13. 01. 2011 - 29 U 4615/09.",
-            "BVerfGE 115, 320, 324 ff.",
-            "BVerfG, DÖV 2008, 56, 57."
-          ],
-          "複數判決引用範例": [
-            "BVerfG, DÖV 2008, 56, 57; DÖV 2012, 12; DÖV 2025, 56, 57."
-          ]
-        },
-        "備註": "依德國習慣（大致可分為完整裁判字號、裁判彙編、期刊收錄三種）。"
-      },
-      "4.3 書籍": {
-        "format": "{$authorSurname}, {$fullTitle}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
-        "example": [
-          "Müller, Juristische Methodik, 6. Aufl., 1995, S. 10 ff.",
-          "Hufen, Staatsrecht II Grundrechte, 9. Aufl., 2021, § 39 Rn. 4."
-        ],
-        "備註": "惟非連續編號之段碼，亦即同一書籍中有不只一個段碼1，請一併標示章節數。"
-      },
-      "4.4 專書論文": {
-        "format": "{$authorSurname}, {$fullArticleTitle}, in: {$editor} (Hrsg.), {$fullBookTitle}, {$volume}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
-        "example": "Stern, Die Grundrechte und ihre Schranken, in: Badura/Dreier (Hrsg.), Festschrift 50 Jahre Bundesverfassungsgericht, Bd. II, 2001, S. 7-15."
-      },
-      "4.5 期刊論文": {
-        "format": "{$authorSurname}, {$fullArticleTitle}, {$journalAbbrev}{$year}, （期數、卷數尊重作者）, S. {$page}（如欲引用該頁註腳，則應另外標示Fn. xx）.",
-        "example": [
-          "Lang/Englisch, Zur Verfassungswidrigkeit der neuen Mindestbesteuerung, StuW 2005, S. 3-24.",
-          "Ruland, Das Grundgesetz und die Entwicklung des Rentenversicherungsrechts, NZS 2010, S. 122 f., Fn. 10."
-        ]
-      },
-      "4.6 註釋書": {
-        "format": "{$authorSurname}, in: {$editor}（全部列出，如果沒有主編就不用列）, {$commentaryTitle}, {$edition}, {$revisionOrYear}（Stand: Lfg.）, {$articleNumber} {$page或段碼Rn}.",
-        "example": [
-          "Klein, in: Maunz/Dürig, Grundgesetz Kommentar, Bd. III, Stand: Lfg. 38 März 2001, Art. 21 Rn. 188 ff.",
-          "Mayen, in: Scheurle/Mayen, TKG Kommentar, 2. Aufl., 2008, § 21 Rn. 18.",
-          "Düren, in: Tipke/Kruse, AO/FGO Kommentar, Bd. I, Stand: Lfg. 149 Juli 2016, Vor § 42 AO Rn. 38a."
-        ],
-        "備註": "書名可寫法規名稱縮寫，應後綴Kommentar。若有慣用縮寫的註釋書，如慕尼黑註釋書MüKo，亦得採用。"
-      },
-      "4.7 前註": {
-        "format": "{$authorSurname} (Fn. {$noteNumber}), S. {$page或段碼Rn}.",
-        "example": "Alexy (Fn. 1), S. 55.",
-        "備註": "不區分是否緊鄰前註。如前註為註釋書等多人合著作品，而後一註腳中欲引用段落之作者與前註不同者，則以「後註作者姓氏 (Fn. xxx), 引用頁或段碼.」方式引用。"
-      },
-      "4.8 轉引著": {
-        "format": "{$sourceA}. 轉引自{$sourceB}.",
-        "example": "Weber, Die Dienst-und Leistungspflichten der Deutschen, 1943, S. 88. 轉引自Jakob, Sonderabgaben-Fremdkörper im Steuerstaat?, in: Kirchhof/Offerhaus/Schöberle (Hrsg.), Steuerrecht-Verfassungsrecht-Finanzpolitik: Festschrift für Franz Klein, 1994, S. 664."
-      },
-      "4.9 網頁文獻": {
-        "format": "{$author} ({$year}), {$title}, in {$url} (最後瀏覽日：{$accessDate}).",
-        "example": "Bundesverfassungsgericht (2025), Meilensteine in der Geschichte des Bundesverfassungsgerichts, in https://www.bundesverfassungsgericht.de/DE/DasBundesverfassungsgericht/Geschichte/geschichte_node.html (最後瀏覽日：2025/06/22).",
-        "備註": "若無作者時，應改列網站名稱。"
-      },
-      "4.10 譯著": {
-        "4.10.1 作者可考": {
-          "format": "{$authorSurname}，{$translator} (Übers.), {$editor} (Hrsg.), {$translatedTitle} ({$originalTitle}), {$year}, S. {$page或段碼Rn}.",
-          "example": "Locke, Hoffmann (Übers.), Euchner (Hrsg.), Zwei Abhandlungen über die Regierung (Two Treatises of Government), 1977, S. 69."
-        },
-        "4.10.2 作者不可考": {
-          "format": "{$editorSurname} (Hrsg.), {$fullTitle}, Text und Übersetzung, {$volume}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
-          "example": "Behrends/Knütel/Kupisch/Seiler (Hrsg.), Corpus Iuris Civilis, Text und Übersetzung, Bd. 2, 1995, S. 12."
-        }
-      },
-      "4.11 議會公報": {
-        "format": "{$documentName}+{$fileNumber}, S. {$page}.",
-        "example": [
-          "Plenarprotokoll des Bundesrates 4/2025, S. 105.",
-          "BT-Drs. 18/9097, S. 30."
-        ]
-      },
-      "4.12 報紙": {
-        "format": "{$authorSurname}: {$articleTitle}, in: {$newspaper}, {$year}/{$month}/{$day}, S. {$page}.",
-        "example": "Schmidt: Der Weg zum Bachelor. Tipps für ein erfolgreiches Studium, in: Nürnberger Neuigkeiten, 2019/10/06, S. 19-23.",
-        "備註": "電子報請依網頁文獻之格式（4.9）。"
-      },
-      "4.13 其他文獻": {
-        "4.13.1 柏拉圖（Stephanus-Paginierung）": {
-          "format": "{$workAbbrev} {$stephanusPage}{$paragraph}{$line}",
-          "example": [
-            "Politikos 268e7",
-            "Politeia VI 509b9"
-          ],
-          "備註": "著作名（可縮寫）+Stephanus版中的引用頁+段落（a, b, c, d）+行數（非必要）。由於理想國（Politeia）與法律篇（Nomoi）篇幅較大，引用時會以羅馬數字標示引用頁所在的書號。"
-        },
-        "4.13.2 亞里士多德（Bekker-Zählung)": {
-          "format": "{$workAbbrev} {$bekkerPage}{$paragraph}-{$line}",
-          "example": "NE 1135b12-17",
-          "備註": "著作名（通常為縮寫）+Bekker版中的引用頁+段落（a, b, c, d）+行數。"
-        },
-        "4.13.3 康德": {
-          "format": "{$workAbbrev}, AA {$volumeRoman}, {$page}. ({$lines})",
-          "example": "MS, AA IV, 331. (5-12)",
-          "備註": "版本（通常為Akademieausgabe）+冊數（羅馬數字）, 引用頁. (行數)。著作縮寫例如：道德形上學（MS）、論永久和平（ZeF）、單純理性限度內的宗教（RGV）。"
-        },
-        "4.13.4 尼采": {
-          "format": "{$editionAbbrev} {$volume} {$workAbbrev}, S. {$page}.",
-          "example": "KSA 1 GT, S. 124.",
-          "備註": "尼采全集的版本縮寫+冊數+著作名, S. 引用頁."
-        }
-      }
-    }
-  },
-  "5. 日文文獻": {
-    "說明通則": [
-      "引註記載資訊的項目、順序、書刊名稱略語等，本小組建議參照現行政大法學評論論文註解範式，以及法律編集者懇話会編『法律文献等の出典の表示方法』(2014)。",
-      "年代一律用西元紀年。但判決使用日本紀元年號部分，依其正式案號記載方式，不改寫加註。",
-      "期刊、書籍年代月份：僅寫出年代數字，省略「年」字，不記載月份。",
-      "副標題應記載；主、副標題間可以用全形冒號，或照原文使用全形破折號（ダッシュ（全角）—）區分，不使用副標題前後的重複短dash或波浪符號（全角チルダ）；使用全形破折號時，應注意避免與長音符「ー」以及漢字「一」混淆。",
-      "不記載期刊的特集資訊，期刊、裁判彙編等刊名記載全名。",
-      "句號：引用日文文獻時，需確認全部使用日文字型。但文獻結尾均使用中文字型句號。",
-      "括號：若括號內有全形字時使用全形；若無（例如僅有數字、羅馬字母時）使用半形，與『出典』採用全形括號不同。",
-      "數字：除標題內使用得出現全形數字以外，版、卷、期、與頁次一律使用半形數字。",
-      "保留「巻」、「号」，不記載「第」。同時有「巻」、「号」與連續編號的期刊，僅記載「巻」、「号」。",
-      "使用中黑點（．）取代=（多位作者、「国家73巻7=8号1頁」應作「国家73巻7・8号1頁」）。",
-      "標題、副標題使用單引號時依原文。",
-      "頁次先於出版年。",
-      "在正文第一次提及時寫出法令全名；推薦使用『出典』收錄的略語。"
-    ],
-    "文獻引用規則": {
-      "5.1 法條": {
-        "format": "{$lawAbbrev}{$article}条{$item}号。",
-        "example": "著作43条2号。",
-        "備註": "限於在註釋中引用時。參照『出典』15頁以下之法律、條約等名稱略語，條項款目次均使用半形數字，省略「第」。"
-      },
-      "5.2 判決": {
-        "說明": [
-          "限於在註釋中引用時。參照『出典』14頁以下的年月日格式。判決請一律提供出處。除常用彙編以外，出處為網站或資料庫時，請參考下列範例，不按一般網路文獻格式引用。"
-        ],
-        "5.2.1 一般（裁判彙編）": {
-          "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日{$reporter}{$volume}巻{$issue}号{$page}頁。",
-          "example": [
-            "最大判平成22年1月20日民集64巻1号1頁。",
-            "福岡高宮崎支判平成22年1月29日金判1349号49頁。",
-            "大判大正12年4月30日刑集2巻378頁。"
-          ]
-        },
-        "5.2.2 網站或資料庫（LEX/DB、TKC）": {
-          "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日LEX/DB {$number}。",
-          "example": "東京地判令和4年8月30日LEX/DB 25593703。",
-          "備註": "格式中LEX/DB與號碼之間空半形1格。"
-        },
-        "5.2.3 網站或資料庫（最高裁HP）": {
-          "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日最高裁HP。",
-          "example": "東京高判平成14年4月11日最高裁HP。",
-          "備註": "請於文章中註明可得特定之相關資訊。"
-        }
-      },
-      "5.3 專書": {
-        "5.3.1 獨著": {
-          "format": "{$author}『{$bookTitle}』{$page}頁（{$edition}版，発行年{$year}）。",
-          "example": "塩野宏『行政法（１）行政法総論』121頁（5版，2009）。"
-        },
-        "5.3.2 合著": {
-          "format": "{$authorA}・{$authorB}『{$bookTitle}』{$page}頁({$year})。",
-          "example": "小野昌延・松村信夫『新・不正競争防止法概説』91頁(2011)。"
-        }
-      },
-      "5.4 翻譯": {
-        "format": "{$author}著（{$translator}訳）『{$bookTitle}』{$page}頁（{$edition}版，発行年{$year}）。",
-        "example": "オッコー・ベーレンツ著（河上正二訳）『歴史の中の民法—ローマ法との対話』73頁(2001)。"
-      },
-      "5.5 期刊論文": {
-        "format": "{$author}「{$articleTitle}」{$journal}{$volume}巻（若有）{$issue}号{$page}頁(発行年{$year})。",
-        "example": [
-          "山口厚｢刑法典—過去・現在とその課題｣ジュリスト1348号2-7頁(2008)。",
-          "大村敦志｢大きな公共性から小さな公共性へ—「憲法と民法」から出発して｣法律時報76巻2号71-77頁(2004)。"
-        ],
-        "備註": "引用全篇時需載明起迄頁，不使用以下。若已另行結集成書，應選擇其中一個版本引用。"
-      },
-      "5.6 專書論文": {
-        "說明": [
-          "一般格式如下，但下列特殊類型請參照範例。"
-        ],
-        "5.6.1 一般": {
-          "format": "{$author}「{$articleTitle}」{$editor}編『{$bookTitle}』{$page}頁(発行年{$year})。",
-          "example": "岡部喜代子｢共同相続財産の占有をめぐる諸問題｣野田愛子ほか編『新家族法実務大系〔３〕相続〔１〕相続・遺産分割』137頁(2008)。"
-        },
-        "5.6.2 講座（參照期刊論文）": {
-          "format": "{$author}「{$articleTitle}」{$seriesEditor}編『{$seriesTitle}』{$page}頁({$year})。",
-          "example": [
-            "土井真一「日本国憲法と国民の司法参加—法の支配の担い手に関する覚書」土井真一編『岩波講座憲法４変容：する統治システム』235頁(2007)。",
-            "梶村太市「和解・調停と要件事実」伊藤滋夫ほか編『民事要件事実講座（２）—総論（２）』210頁(2005)。"
-          ],
-          "備註": "代表編者與單篇作者為同一人時，仍分別記載。"
-        },
-        "5.6.3 註釋書（參照獨著）": {
-          "format": "{$editor}編『{$commentaryTitle}』{$page}頁〔{$author}執筆〕({$year})。",
-          "example": "江頭憲治郎編『会社法コンメンタール６—新株予約権§§236–294』16頁〔江頭憲治郎執筆〕(2009)。"
-        },
-        "5.6.4 祝賀論文集": {
-          "format": "{$author}｢{$articleTitle}｣{$honoree}先生古稀記念『{$bookTitle}』{$page}頁({$year})。",
-          "example": "平井宜雄｢債権者代位権の理論的位置—解約返戻金支払請求権の差押および代位請求を手がかりとして｣加藤一郎先生古稀記念『現代社会と民法学の動向〔下〕—民法一般』223頁(1992)。"
-        }
-      },
-      "5.7 判例研究": {
-        "5.7.1 期刊型": {
-          "format": "{$author}｢{$noteTitle}[{$court}{$decisionDate}判決]｣{$journal}{$volume}巻{$issue}号{$page}頁({$year})。",
-          "example": "髙部眞規子｢民事再生法上の共益債権を弁済により代位した者が民事再生手続によることなくこれを行使することの可否[大阪地裁平成21.9.4判決]｣金融法務事情58巻11号26-37頁(2010)。"
-        },
-        "5.7.2 單行本型": {
-          "format": "{$editor}編著『{$bookTitle}』{$page}頁({$year})。",
-          "example": "東京・大阪医療訴訟研究会編著『医療訴訟ケースファイルVol.3』127頁(2010)。"
-        }
-      },
-      "5.8 座談會": {
-        "format": "{$participants}ほか｢{$title}｣{$journal}{$volume}巻{$issue}号{$page}頁〔{$speaker}発言〕({$year})。",
-        "example": "綿貫芳源ほか｢行政事件訴訟法を見直す（下）｣自治研究76巻6号18頁〔園部逸夫発言〕(2000)。"
-      },
-      "5.9 參照前註": {
-        "format": "{$author}・前掲注({$noteNumber}){$page}頁。",
-        "example": "碓井光明・前掲注(16)141頁。",
-        "備註": "若同一註釋中引用同一作者之多篇期刊論文，例如連載論文時可增加簡略篇名為：作者姓名・前掲注(N)「簡略篇名」N頁。如文獻同時有編者與著者，則引用前註時僅列出著者。"
-      },
-      "5.10 網路文獻": {
-        "format": "（依中文文獻 2.15 之格式，僅「最後瀏覽日」使用中文字型）",
-        "example": "法務省法制審議会，民法（債権関係）部会第68回会議議事録，頁33（鹿野幹事發言），https://www.moj.go.jp/content/000113298.pdf（最後瀏覽日：2025/07/11）。",
-        "備註": "網路文獻仍以中文文獻 2.15 部分為主，僅「最後瀏覽日」使用中文字型。"
-      }
-    }
-  },
-  "6. 法文文獻": {
-    "說明通則": {
-      "一般原則": [
-        "法令規章引用方式、書刊名稱略語、以及不同性質資料的分隔符號 (séparateur)等部分，本小組建議原則參照法國出版者協會(SNE)編纂的法律參考資訊編輯指南(Ref-Lex)（最近一次更新為2026年）。Syndicat national de l’Edition, REFLEX: Guide de rédaction des références juridiques, 30 mars 2026.",
-        "法文格式部分，大寫字不加重音符號（使用l’Etat 而非l’État；Age 而非 Âge）。序數可上標或不上標，例如1er, 1er, 3ème, 3ème, 5e, 5e。"
-      ],
-      "標點符號使用方式": {
-        "6.0.1 同類型文獻間": {
-          "format": "{$citationA}; {$citationB}",
-          "example": [
-            "C. trav., art. R.* 1233-3-4; L. n° 2015-177, 16 févr. 2015; Rép. min. n° 81548: JOAN, 23 juin 2015, 4769, A. Santini.",
-            "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 556; G. Raymond, Droit de l'enfance et de l'adolescence, 5e éd., 2006, 452."
-          ],
-          "備註": "法條、判決等官方文件之間，或專書、論文等文獻之間，使用分號 [;] (point-virgule) 區隔。"
-        },
-        "6.0.2 官方文件刊載於特定媒介": {
-          "format": "{$officialDocument}: {$publicationMedium}",
-          "example": "L. n° 2016-162, 19 févr. 2016, prorogeant l’application de la loi n° 55-385 du 3 avril 1955 relative à l’état d’urgence, NOR: INTX1602418L: JO n° 0043, 20 févr. 2016 CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100",
-          "備註": "官方文件與刊載媒介之間，使用冒號 [:] (deux-points) 區隔。"
-        },
-        "6.0.3 不同組文獻之間": {
-          "format": "{$groupA} – {$groupB}",
-          "example": "CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100– L. n° 2015-177, 16 févr. 2015: Comm. com. électr. 2010, repère 10; Dr. famille 2010, prat. 8",
-          "備註": "官方文件與文獻為一組時，不同組之間使用破折號 [–] (demi-cadratin; en dash) 區隔。"
-        }
-      }
+      ]
     },
-    "文獻引用規則": {
-      "6.1 法條": {
-        "6.1.1 已編入法典": {
-          "format": "{$codeAbbrev}, art. {$article}{$paragraph}",
-          "example": [
-            "CMP, art. 35, II",
-            "CSP, art. L. 1131-2-1, al. 4",
-            "CSS, art. L. 162-12-15, al. 5",
-            "C. trav., art. R.* 1233-3-4",
-            "CGCT, art. D. 1115-1",
-            "C. arb. sport, art. 44.2",
-            "CGI, ann. II, art. 96 ter A"
+    {
+      "code": "2.",
+      "name": "中文文獻",
+      "rule": [
+        {
+          "code": "2.1",
+          "name": "說明通則",
+          "rule": [
+            {
+              "code": "2.1.1",
+              "description": "首次於內文中引用判決時應使用全稱，後續得簡化表示。"
+            },
+            {
+              "code": "2.1.2",
+              "description": "引用簡體中文文獻時應以原文呈現即可，無須改為繁體中文。"
+            },
+            {
+              "code": "2.1.3",
+              "description": "紀年：判決、行政機關函釋以民國紀年引用；其他期刊、書籍等文獻統一以西元紀年引用。"
+            },
+            {
+              "code": "2.1.4",
+              "description": "文獻時間之引註依國人閱讀習慣，順序以西元年、月、日呈現。如有需以「年/月/日」標示處，請以「YYYY/MM/DD」八位數字表示。"
+            },
+            {
+              "code": "2.1.5",
+              "description": "卷、期、頁等以阿拉伯數字呈現，不標註「第」字，如：37卷2期，頁55-57。"
+            }
           ]
         },
-        "6.1.2 有時序號的法令": {
-          "format": "{$lawTypeAbbrev} n° {$number}, {$date}, {$title}",
+        {
+          "code": "2.2",
+          "name": "法條",
+          "description": "完整表示，請勿使用簡稱或法條符號§。",
           "example": [
-            "L. const. n° 2008-724, 23 juill. 2008",
-            "L. org. n° 2014-1392, 24 nov. 2014, portant application de l’article 68 de la Constitution",
-            "L. n° 2015-177, 16 févr. 2015, art. 1er, I, 1°, b",
-            "L. fin. 2014 n° 2013-1278, 29 déc. 2013",
-            "LFSS 2015 n° 2014-1554, 22 déc. 2014",
-            "L. DADDUE n° 2013-619, 16 juill. 2013, NOR: DEVK1240259L",
-            "L. DMOS n° 93-121, 27 janv. 1993, portant diverses mesures d’ordre social",
-            "D. n° 2015-261, 5 mars 2015, relatif au fonctionnement et à l’organisation des tribunaux maritimes",
-            "D.-L. n° 55-888, 20 mai 1955, concernant la recherche et l’exploitation des substances minérales",
-            "Ord. n° 58-1067, 7 nov. 1958"
+            "憲法第27條第1項第1款。",
+            "民法第184條第1項前段。",
+            "民法第796條之1。"
           ]
         },
-        "6.1.3 無時序號的法令": {
-          "format": "{$lawTypeAbbrev}, {$date}, {$title}, NOR: {$norNumber}",
+        {
+          "code": "2.3",
+          "name": "憲法法庭判決及司法院大法官解釋",
+          "description": "完整表示為「憲法法庭OOO年憲判字第OOO號」或「司法院釋字第OOO號」（字尾不需加「解釋」）。引用司法院大法官會議議決不受理案件時，應引用完整發文字號。",
           "example": [
-            "D., 17 juill. 2008, tendant à soumettre un projet de loi constitutionnelle au Parlement réuni en Congrès, NOR: HRUX0817196D",
-            "A., 28 août 2006, fixant la liste des renseignements et des documents pouvant être demandés aux candidats aux marchés passés par les pouvoirs adjudicateurs, NOR: ECOM0620008A",
-            "Circ., 31 juill. 2015, relative aux contrôles dans les exploitations agricoles, NOR: PRMX1519017C",
-            "Circ. n° 5788-SG, 12 mai 2015, relative à l’apprentissage dans la fonction publique de l’Etat: mobilisation pour la rentrée 2015"
-          ]
-        }
-      },
-      "6.2 公報": {
-        "format": "{$gazetteAbbrev} [n° {$number}], {$date}, {$pageOrTextNumber}.",
-        "example": [
-          "JO n° 0116, 21 mai 2015, texte n° 1",
-          "JO n° 0152, 3 juill. 2015, 11201",
-          "JO n° 0261, 10 nov. 2015, texte n° 2, 20938",
-          "JOAN, 23 juin 2015, 4769",
-          "JO Sénat, 17 juill. 2015, 7771"
-        ],
-        "備註": "涉及部會向國會答詢時使用JOAN/JO Sénat。號次以2015年以前用編號或頁標示。"
-      },
-      "6.3 未刊行於公報的提案": {
-        "format": "Projet de loi/Proposition de loi {$chamber}, {$sessionYears}, {$title}, {$url}",
-        "example": "Proposition de loi Sénat n° 680, 2014-2015, tendant à garantir le respect du domicile, https://www.senat.fr/leg/ppl14-680.html"
-      },
-      "6.4 法國各級法院判決": {
-        "format": "{$court}, {$formation}, {$date}, n° {$caseNumber}, {$partyName}.",
-        "example": [
-          "Cons. const., 8 août 1985, n° 85-196 DC",
-          "Cass. crim., QPC, 9 nov. 2013, n° 13-84.909",
-          "CA Paris, 4-1, 11 mars 2016, n° 13/167377",
-          "CE, ass., 17 juin 2015, n° 384826, Société La Chaîne Info (LCI)."
-        ],
-        "備註": "行政訴訟判決當事人為法人時，得記載當事人名稱，其組織型態如公司、協會、地方commune等可採略語。"
-      },
-      "6.5 裁判彙編": {
-        "format": "{$reporterAbbrev}, {$year或volume}, {$page或number}",
-        "example": [
-          "Rec. Cons. const., 2014, 104",
-          "Bull. civ. II, n° 12",
-          "Lebon, 512"
-        ]
-      },
-      "6.6 期刊論文": {
-        "6.6.1 作為主要參考資料引用時": {
-          "format": "{$author}, {$title}, {$journalAbbrev} {$month} {$year}, ({$issue}), {$number}, {$page}.",
-          "example": [
-            "L. Cadiet, Le principe de loyauté devant le juge civil et le juge commercial, Procédures 2015, dossier 10.",
-            "P. Hurlin-Sanchez, Répartition des sièges dans les intercommunalités, le calme avant la tempête?, CFP 2014, n° 344, 54.",
-            "P. Lagarde, Les principes de base du nouveau règlement européen sur les successions, Rev. Crit. DIP 2014, 700."
+            "憲法法庭113年憲判字第10號。",
+            "司法院釋字第109號。",
+            "院台大二字第1100036313號。"
           ],
-          "備註": "期刊為連續編號時，可不記載出版月。"
+          "webNote": "本網站較不能認同此處的決定。憲法法庭裁判，應可逕依規則2.5辦理，簡化引註格式的複雜度；司法院大法官解釋，若真要稱完整表示，反而應在字尾加上「解釋」二字，即「司法院釋字第OOO號解釋」。不過目前規則如此，也只好照辦。"
         },
-        "6.6.2 附帶引用時（法令判解之介紹、評釋等）": {
-          "format": "{$journalAbbrev} {$monthAbbrev} {$year}, ({$issue}), {$category}, {$pageOrNumber}, {$noteType}（若需要）, {$author}（若需要）.",
+        {
+          "code": "2.4",
+          "name": "行政函釋",
+          "description": "依行政院各部發布之官方文件表示。如函釋中包含機關發布函釋之民國年、月、日，應統一以「民國年/月/日」表示。",
           "example": [
-            "AJDA 2015, 100.",
-            "CFP 2014, n° 344, 54.",
-            "Comm. com. électr. 2010, repère 10.",
-            "D. 2015, Pan., 100, obs. E. Chevrier.",
-            "JCP G 2006, doctr. 100.",
-            "RLDI 2015/2, n° 100."
+            "內政部（88）年臺內地字第8811978號函。",
+            "財政部98/12/11台財稅字第09800554670號令。"
           ]
-        }
-      },
-      "6.7 專書、研討會論文": {
-        "format": "{$author}, {$articleTitle}, in {$editor}（兩人以上則第二人以後皆省略）et a. (dir.), {$bookOrConferenceTitle}, {$year}, {$page}.",
-        "example": "F. Blanco, Les vicissitudes de la conciliation médicale, in C. Castaing et a. (dir.), Mélanges en l’honneur de Jean-Marie Clément, 2014, Les Etudes hospitalières, 23."
-      },
-      "6.8 專書": {
-        "format": "{$authorOrEditor}(dir), {$bookTitle}, {$year}, {$translator}[trad.]（若有）, {$volume}（若有）, {$edition}éd., {$year2}, {$page}.",
-        "example": [
-          "P.-Y. Gautier, Propriété littéraire et artistique, vol. 1, 9e éd., 2015, 357.",
-          "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 456.",
-          "P. Mbongo et a. (dir.), Dictionnaire encyclopédique de l’Etat, 2014, 198."
-        ]
-      },
-      "6.9 學位論文": {
-        "format": "{$author}, {$thesisType}（thèse/mémoire）, {$year}, {$institutionOrPublisher}, {$prefaceAuthor}[préf.]（已出版時）, {$degreeName}（未出版時）, {$page}.",
-        "example": {
-          "已出版博士論文": "B. Defoort, La décision administrative, thèse, 2015, LGDJ, 706.",
-          "已出版有序言": "J. Laurent, La propriété des droits, thèse, 2012, LGDJ, préf. T. Revet, 68.",
-          "未出版碩士論文": "N. Mathe, La fraude à la TVA, mémoire, 2011, Université Toulouse 1 Capitole, Master 2 Droit fondamental des affaires."
-        }
-      },
-      "6.10 多人合著": {
-        "format": "{$leadAuthor}（兩人以上則第二人以後皆省略）et a., {$bookTitle}, {$edition}éd., {$year}, {$page}.",
-        "example": [
-          "S. Berre et a., Environnement économique et managérial du notariat, 2014, 301.",
-          "Collectif, Code pénal 2016, 112e éd., 2015, Codes Dalloz.（著者不詳時）"
-        ]
-      },
-      "6.11 百科全書、彙編類著作": {
-        "format": "{$workTitle}, {$volume}, {$book}, {$entryOrKeyword}, {$pageOrNumber}, {$author}（若有必要）.",
-        "example": [
-          "TP TI service pénal, fasc. Tribunal de police, n° 53.",
-          "Doc. fisc. Lefebvre, FONC-II-612.",
-          "FM Litec Droit pharmaceutique, Fasc. 38.",
-          "JCl. Civil Code Formulaire, Fasc. 300.",
-          "Joly Contrats internationaux, livre 1, Le contrat international, n° 120.",
-          "FM Litec Discours et Agenda du Maire, V° Conseil municipal, fasc. 10."
-        ]
-      },
-      "6.12 電子資源": {
-        "format": "{$author}, {$title}, {$platform}, {$section}.",
-        "example": {
-          "作為主要參考資料引用時": [
-            "D. Legeais, Contrats de distribution, JCl. Commercial, Synthèse 50.",
-            "T. Simon, Focus Petit guide de survie des POS, Actualités, Légibase Urbanisme, 1er oct. 2015."
+        },
+        {
+          "code": "2.5",
+          "name": "法院裁判",
+          "description": [
+            "完整表示，是否特別註明該裁判為「民事裁定、民事判決、刑事裁定或刑事判決」等，請以司法院裁判書查詢系統（https://judgment.judicial.gov.tw/FJUD/default_AD.aspx）為準。",
+            "於同一註腳引用複數判決時，如該等判決由相同法院作成，得僅就第一則判決指明法院名稱及審級，以期精簡；若該等判決係由不同法院作成，則不得省略法院名稱及審級。"
           ],
-          "附帶引用": [
-            "Dalloz actualité, 1er févr. 2015, obs. E. Chevrier.",
-            "www.elnet.fr",
-            "Légibase Etat civil, Fiche pratique Déclaration de naissance, 8 oct. 2015."
+          "multipleTypeExample": [
+            {
+              "type": "單一判決引用",
+              "example": [
+                "最高法院108年度台上字第1264號民事判決。",
+                "大理院統字第1070號解釋。",
+                "司法院院字第103號解釋。",
+                "最高法院解字第6號解釋。"
+              ]
+            },
+            {
+              "type": "複數判決引用",
+              "example": [
+                "最高法院104年度台上字第1700號民事判決、106年度台上字第2428號民事判決、110年度台上字第3166號民事判決。",
+                "臺灣彰化地方法院110年度金訴字第85號刑事判決、臺灣高等法院臺中分院111年度金上訴字第1469號刑事判決、最高法院112年度台上字第2175號刑事判決。"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.6",
+          "name": "法院判例或決議",
+          "description": "完整表示，不需加作成年月，並且判例不需標（舊）。",
+          "format": "{$court}{$rocYear}年{$caseType}字第{$number}號{$judgmentType}。或　{$court}{$rocYear}年度第{$number}次{$meetingType}會議。",
+          "example": [
+            "最高法院81年台上字第3521號刑事判例。",
+            "最高法院91年度第14次民事庭會議。"
+          ]
+        },
+        {
+          "code": "2.7",
+          "name": "有具體篇名之論文",
+          "rule": [
+            {
+              "code": "2.7.1",
+              "name": "收錄於期刊之論文",
+              "description": "作者，篇名，期刊名，期刊卷期，頁碼，出版年。",
+              "format": "{$author}，{$title}，{$journal}，{$volume}卷{$issue}期，頁{$page}，{$year}年。",
+              "example": "王皇玉，論施用毒品行為之犯罪化，臺大法學論叢，33卷6期，頁39-56，2004年。"
+            },
+            {
+              "code": "2.7.2",
+              "name": "收錄於專書之論文",
+              "rule": [
+                {
+                  "code": "2.7.2.1",
+                  "name": "編者同作者",
+                  "format": "{$author}，{$title}，收於：{$bookTitle}，頁{$page}，{$year}年。",
+                  "example": "王鵬翔，規則是法律推理的排它性理由嗎？，收於：2008法律思想與社會變遷，頁353-379，2008年。"
+                },
+                {
+                  "code": "2.7.2.2",
+                  "name": "編者非作者",
+                  "format": "{$author}，{$title}，收於：{$editor}編，{$bookTitle}，頁{$page}，{$year}年。",
+                  "example": "林子儀，言論自由的限制與雙軌理論，收於：李鴻禧教授六秩華誕祝賀論文集編輯委員會編，現代國家與憲法—李鴻禧教授六秩華誕祝賀論文集，頁700，1997年。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.8",
+          "name": "書籍或無具體篇名之文章",
+          "description": "未出版、線上發布之學術研究報告，如有出版頁者，亦依以下格式引用；無出版頁者，則依「2.15 網路文獻」格式引用。",
+          "rule": [
+            {
+              "code": "2.8.1",
+              "name": "由個人獨立著作之書籍",
+              "description": "作者，書名，版次（初版無須註明），頁碼，出版年。",
+              "format": "{$author}，{$bookTitle}，{$edition}（初版無須註明），頁{$page}，{$year}年。",
+              "example": "王澤鑑，債法原理（一）：基本理論、債之發生，頁110-122，1999年。"
+            },
+            {
+              "code": "2.8.2",
+              "name": "由多人共同著作之書籍",
+              "rule": [
+                {
+                  "code": "2.8.2.1",
+                  "name": "有編者但無篇名（如教科書、專論等）",
+                  "format": "{$editor}，{$bookTitle}，{$edition}（初版無須註明），頁{$page}（{$author}執筆），{$year}年。",
+                  "example": "臺灣勞動法學會，勞動基準法釋義──施行40年之回顧與展望，頁642-657（林佳和執筆），2024年。"
+                },
+                {
+                  "code": "2.8.2.2",
+                  "name": "一位作者，並有續著/修訂/校訂者時",
+                  "format": "{$author1}（{$author2}續著［或其他書籍使用之動詞］），{$bookTitle}，{$edition}（初版無須註明），頁{$page}，{$year}年。",
+                  "example": "邱聰智（姚志明校訂），新訂債法各論（上），頁23-30，2008年。"
+                },
+                {
+                  "code": "2.8.2.3",
+                  "name": "多人列為作者時",
+                  "format": "{$author1}、{$author2}，{$bookTitle}，{$edition}，頁{$page}，{$year}年。",
+                  "example": "黃東熊、吳景芳，刑事訴訟法論（上），頁70-82，2004年。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.9",
+          "name": "研討會文章",
+          "description": "作者，篇名，研討會名稱，主辦單位，頁碼，研討會年月日。",
+          "format": "{$author}，{$title}，{$conference}，{$organizer}主辦，頁{$page}，{$date}。",
+          "example": "廖福特，姓氏作為人格權—國際標準與國內實踐，第八屆「憲法解釋之理論與實務」學術研討會，中央研究院法律學研究所主辦，頁10，2011年12月9日。"
+        },
+        {
+          "code": "2.10",
+          "name": "碩博士論文",
+          "description": "作者，論文標題，論文出處（OOO系所論文），頁碼，發表年。",
+          "format": "{$author}，{$title}，{$institution}（{$department}論文），頁{$page}，{$year}年。",
+          "example": "林子儀，國家從事公營事業之憲法基礎及界限，國立臺灣大學法律學研究所碩士論文，頁30，1983年。"
+        },
+        {
+          "code": "2.11",
+          "name": "翻譯書或文章",
+          "description": "作者姓名優先以原文標示，如出版社僅提供譯名，則可以譯名標示。",
+          "format": "{$author}（{$translator}譯／{$reviser}修訂），{$bookTitle}，頁{$page}，{$year}年。",
+          "example": "Richard A. Epstein（簡資修譯），自由社會的原則，頁35-40，2003年。"
+        },
+        {
+          "code": "2.12",
+          "name": "報紙",
+          "description": "無須區分紀實性報導或評論與特稿，統一使用以下格式。",
+          "rule": [
+            {
+              "code": "2.12.1",
+              "name": "實體報紙",
+              "description": "作者，報導標題，報紙名，版面，出版年月日。",
+              "format": "{$author}，{$title}，{$newspaper}，{$page}版，{$year}年{$month}月{$day}日。",
+              "example": "王奕琪，勞動節醫學生上街反過勞，大學報，A1版，2012年5月4日。"
+            },
+            {
+              "code": "2.12.2",
+              "name": "網路報紙",
+              "description": "作者，報導標題，報紙名，出版年月日，網址連結（最後瀏覽日：年/月/日）。",
+              "format": "{$author}，{$title}，{$newspaper}，{$year}年{$month}月{$day}日，{$url}（最後瀏覽日：{$accessDate}）。",
+              "example": "高宛瑜，「油價漲也好」民眾：凍漲政府會內傷，聯合報，2012年4月1日，http://udn.com/NEWS/BREAKINGNEWS/BREAKINGNEWS3/7000607.shtml#ixzz1qnGvJ1u1（最後瀏覽日：2012/05/03）。"
+            }
+          ]
+        },
+        {
+          "code": "2.13",
+          "name": "公報",
+          "description": "公報名稱，公報號次或卷期，（冊），頁碼（若有），出版年。",
+          "format": "{$gazetteName}，{$issueOrVolume}期，（{$book}），頁{$page}（若有），{$year}年。",
+          "example": [
+            "立法院公報，71卷101期，頁110，1982年。",
+            "總統府公報，7065號，頁28，2012年。"
+          ]
+        },
+        {
+          "code": "2.14",
+          "name": "前註",
+          "description": "如註X中包含兩篇以上文章，則應於作者後標註指定篇名（如第三例）。",
+          "format": "{$author}，註{$noteNumber}，頁{$page}（若引註頁碼與註X不同，則應註明）。",
+          "example": [
+            "湯德宗，註1。",
+            "湯德宗，註1，頁41。",
+            "湯德宗，台灣違憲審查制度之改革，註1，頁41。"
+          ]
+        },
+        {
+          "code": "2.15",
+          "name": "網路文獻",
+          "description": "未出版、線上發布之學術研究報告，如無出版頁者，亦依以下格式引用；有出版頁者，則依「2.8 書籍或無具體篇名之文章」格式引用。",
+          "rule": [
+            {
+              "code": "2.15.1",
+              "name": "無提供Archive URL者",
+              "description": "作者，篇名，論壇名，出版年月日，網址連結（最後瀏覽日：年/月/日）。",
+              "format": "{$author}，{$title}，{$forumName}，{$year}年{$month}月{$day}日，{$url}（最後瀏覽日：{$accessDate}）。",
+              "example": "李建良，AI規範的歷史鏡象，臺灣人工智慧行動網，2020年2月19日，https://ai.iias.sinica.edu.tw/ai-regulation-history-reflection/（最後瀏覽日：2025/06/08）。"
+            },
+            {
+              "code": "2.15.2",
+              "name": "有提供Archive URL者",
+              "description": "作者，篇名，論壇名，出版年月日，網址連結 [Archive URL]。",
+              "format": "{$author}，{$title}，{$forumName}，{$year}年{$month}月{$day}日，{$url} [{$archiveUrl}]。",
+              "example": "邱文聰，〈澄社評論〉旺中仙貝，自由廣場，2012年2月3日，http://www.libertytimes.com.tw/2012/new/feb/3/today-o8.htm [https://web.archive.org/web/20120408141622/http://www.libertytimes.com.tw/2012/new/feb/3/today-o8.htm]。"
+            },
+            {
+              "code": "2.15.3",
+              "name": "先期電子出版文章",
+              "description": "作者，篇名，期刊名，期刊卷期，頁碼，出版年，網址連結（最後瀏覽日：年/月/日）。",
+              "format": "{$author}，{$title}，{$journal}，{$volume}卷{$issue}期，頁{$page}，{$year}年，{$url}（最後瀏覽日：{$accessDate}）。",
+              "example": "許家馨，應報即復仇？—當代應報理論及其對死刑之意涵初探，中研院法學期刊第15期，頁215-221，2014年，publication.iias.sinica.edu.tw/90501441.pdf（最後瀏覽日：2015/02/13）。"
+            }
           ]
         }
-      },
-      "6.13 前註引用": {
-        "format": "{$authorSurname}, supra note {$noteNumber}, {$page}.",
-        "example": "Hurlin-Sanchez, supra note 23, 55."
-      }
+      ]
+    },
+    {
+      "code": "3.",
+      "name": "英文文獻",
+      "rule": [
+        {
+          "code": "3.1",
+          "name": "說明通則",
+          "rule": [
+            {
+              "code": "3.1.1",
+              "description": "註腳位置依照中文之規定，置於標點符號前。惟如全文以英文撰寫，則註腳置於標點符號後。"
+            },
+            {
+              "code": "3.1.2",
+              "description": "於內文內引用之任何外文，應依原文呈現之大小寫方式，不予變更。"
+            },
+            {
+              "code": "3.1.3",
+              "description": "本格式所未規定者，請參照The Bluebook最新版次之規定。"
+            }
+          ]
+        },
+        {
+          "code": "3.2",
+          "name": "法條和判決",
+          "description": "超國家層級與國際公約、條約等規範文件依該組織／該機關所提供之引註格式。判決於本文及註腳引用時，均不須使用斜體。",
+          "format": "依該國／該區域／該組織／該機關所提供之引註格式。但應包含必要之資訊。",
+          "example": [
+            "US: 28 U.S.C. § 1291 (2012).",
+            "Dobbs v. Jackson Women’s Health Organization, 597 U.S. 215 (2022).",
+            "UK: Human Rights Act 1998, s 15(1)(b).",
+            "For Women Scotland Ltd v. The Scottish Ministers [2025] UKSC 16.",
+            "UN: United Nations General Assembly, <span class=\"italic\">Restoration of the lawful rights of the People’s Republic of China in the United Nations</span>, GA Res 2758 (XXVI), UN Doc A/RES/2758(XXVI) (25 October 1971)."
+          ]
+        },
+        {
+          "code": "3.3",
+          "name": "書籍",
+          "description": "複數編者之引註方式同作者。初版書籍無須註明版次。",
+          "rule": [
+            {
+              "code": "3.3.1",
+              "name": "一位作者",
+              "description": [
+                "複數編者之引註方式同作者。初版書籍無須註明版次。"
+              ],
+              "format": "<span class=\"smallcaps\">{$author}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
+              "example": [
+                "<span class=\"smallcaps\">Mary Anne Franks, Fearless Speech: Breaking Free from the First Amendment</span> (2024).",
+                "<span class=\"smallcaps\">Catharine A. MacKinnon</span>, <span class=\"smallcaps\">Feminism Unmodified: Discourses on Life and Law</span> 34 (1987)."
+              ]
+            },
+            {
+              "code": "3.3.2",
+              "name": "二位作者",
+              "description": [
+                "複數編者之引註方式同作者。初版書籍無須註明版次。"
+              ],
+              "format": "<span class=\"smallcaps\">{$authorA}</span> &amp; <span class=\"smallcaps\">{$authorB}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
+              "example": "（格式同一位作者，第二位作者前以「&」連接，全部作者姓名與書名均使用小型大寫字）"
+            },
+            {
+              "code": "3.3.3",
+              "name": "三位以上作者（以下兩種引用方式擇一）",
+              "description": [
+                "複數編者之引註方式同作者。初版書籍無須註明版次。"
+              ],
+              "format": [
+                "<span class=\"smallcaps\">{$author}</span> <span class=\"smallcaps\">et al.</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
+                "<span class=\"smallcaps\">{$authorA}</span>, <span class=\"smallcaps\">{$authorB}</span> &amp; <span class=\"smallcaps\">{$authorC}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year})."
+              ],
+              "example": [
+                "Richard H. Fallon, Jr., John F. Manning, Daniel J. Meltzer &amp; David L. Shapiro, <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009).",
+                "Richard H. Fallon, Jr. et al., <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009)."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "3.4",
+          "name": "專書論文",
+          "description": "編者有2位以上時，請用eds.。作（編）者有2位以上時，作（編）者表示方式同書籍之引註方式。",
+          "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, <span class=\"italic\">in</span> {$volume} <span class=\"smallcaps\">{$bookTitle}</span> {$startPage}, {$pinpointPage} ({$editor} ed., {$year}).",
+          "example": [
+            "Robin L. West, <span class=\"italic\">Law</span><span class=\"italic\">’s Sentiments</span><span class=\"italic\">, in</span> <span class=\"smallcaps\">Research Handbook on Law and Emotion</span> 44, 57 (Susan A. Bandes, Jody Lyneé Madeira, Kathryn D. Temple &amp; Emily Kidd White eds., 2021).",
+            "Kimberlé Crenshaw, <span class=\"italic\">Race, Reform, and Retrenchment: Transformation and Legitimation in Antidiscrimination Law, in</span> <span class=\"smallcaps\">Critical Race Theory: The Key Writings That Formed the Movement</span> 103 (Kimberlé Crenshaw et al. eds., 1996)."
+          ]
+        },
+        {
+          "code": "3.5",
+          "name": "期刊論文",
+          "description": "作者有2位以上時，作者表示方式同書籍之引註方式，但無須小型大寫字。期刊名稱必須縮寫並使用小型大寫字。",
+          "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, {$volume} <span class=\"smallcaps\">{$journalAbbrev}</span> {$startPage}, {$pinpointPage} ({$year}).",
+          "example": [
+            "Charles A. Reich, <span class=\"italic\">The New Property</span>, 73 <span class=\"smallcaps\">Yale L.J.</span> 733, 737-38 (1964).",
+            "Reva B. Siegel, “<span class=\"italic\">The Rule of Love</span>”<span class=\"italic\">: Wife Beating as Prerogative and Privacy,</span> 105 <span class=\"smallcaps\">Yale L. J.</span> 2117 (1995)."
+          ]
+        },
+        {
+          "code": "3.6",
+          "name": "前註",
+          "description": "作者姓字體和該註首次出現時作者名稱字體相同：例如引用書籍時作者姓名即用小型大寫字，期刊論文作者姓名則為一般體。",
+          "format": "{$authorSurname}, <span class=\"italic\">supra</span> note {$noteNumber}, at {$pinpointPage}.",
+          "example": "Vogel, <span class=\"italic\">supra</span> note 10, at 1020, 1040-43, 1050."
+        },
+        {
+          "code": "3.7",
+          "name": "報紙",
+          "description": "日期格式為YYYY/MM/DD。",
+          "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, <span class=\"smallcaps\">{$newspaper}</span>, {$date}, at {$page}.",
+          "example": "Ari L. Goldman, <span class=\"italic\">“O</span><span class=\"italic\">’Connor Warns Politicians Risk Excommunication over Abortion</span><span class=\"italic\">”</span>, <span class=\"smallcaps\">The New York Times</span>, 1990/06/15, at A1."
+        },
+        {
+          "code": "3.8",
+          "name": "翻譯書",
+          "format": "<span class=\"smallcaps\">{$author}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$editor} ed., {$translator} trans., {$edition} {$translationYear}) ({$originalYear}).",
+          "example": [
+            "Michel Foucault, Discipline and Punish 30-31 (Alan Sheridan trans., 2nd ed. 1995) (1975).",
+            "Karl Marx &amp; Frederich Engels, The Communist Manifesto (Joseph Katz ed., Samuel Moore trans., 1964) (1848)."
+          ]
+        },
+        {
+          "code": "3.9",
+          "name": "即將出版之論文",
+          "format": "{$author}, <span class=\"italic\">{$articleTitle}</span>, {$volume} <span class=\"smallcaps\">{$journalAbbrev}</span> (forthcoming).",
+          "example": "Thomas W. Merrill &amp; Henry E. Smith, <span class=\"italic\">Making</span> <span class=\"italic\">Coasean</span> <span class=\"italic\">Property More</span> <span class=\"italic\">Coasean</span>, J.L. &amp; Econ. (forthcoming)."
+        },
+        {
+          "code": "3.10",
+          "name": "網路文獻",
+          "description": "該網站本身會持續更新資訊，則放上last visited，該引用文獻本身有發表時間則不須。\n如文獻屬於working paper，則無須列出working paper系列名稱及編號。",
+          "rule": [
+            {
+              "code": "3.10.1",
+              "name": "一般網路文獻",
+              "description": [
+                "該網站本身會持續更新資訊，則放上last visited，該引用文獻本身有發表時間則不須。",
+                "如文獻屬於working paper，則無須列出working paper系列名稱及編號。"
+              ],
+              "format": "{$author} [如適用], <span class=\"italic\">{$articleTitle}</span> [如適用], <span class=\"smallcaps\">{$siteName}</span> ({$date} [如適用]), {$url} (last visited {$accessDate} [如適用]).",
+              "example": [
+                "<span class=\"italic\">Our Stories</span>, We Can’t Consent To This, https://wecantconsenttothis.uk/our-stories (last visited 2025/04/17).",
+                "Daniel Davies, <span class=\"italic\">Supreme Court gender ruling 'significant for services'</span>, BBC News (2025/04/29), https://www.bbc.com/news/articles/czrvjg3k07ro.",
+                "<span class=\"italic\">Statement on President Trump</span><span class=\"italic\">’s Executive Order to Return Power Over Education to States and Local Communities</span>, U.S. Department of Education (2025/03/20), https://www.ed.gov/about/news/press-release/statement-president-trumps-executive-order-return-power-over-education-states-and-local-communities.",
+                "Linda Greenhouse, <span class=\"italic\">The New Anti-Abortion Argument Takes Us Back to the 19th Century</span>, The New York Times (2024/11/18), https://www.nytimes.com/2024/11/18/opinion/abortion-medication-courts.html.",
+                "Scott Shapiro (@scottjshapiro), X (2023/10/05, 8:48 PM), https://x.com/scottjshapiro/status/1709913561693114481."
+              ]
+            },
+            {
+              "code": "3.10.2",
+              "name": "working paper範例",
+              "description": [
+                "該網站本身會持續更新資訊，則放上last visited，該引用文獻本身有發表時間則不須。",
+                "如文獻屬於working paper，則無須列出working paper系列名稱及編號。"
+              ],
+              "format": "{$author}, <span class=\"italic\">{$title}</span> {$page}, {$repository} ({$date}), {$url}.",
+              "example": "Jens Frankenreiter, Talia B. Gillis &amp; Eric L. Talley, <span class=\"italic\">Sex &amp; Startups</span> 25–29, SSRN (2025/06/18), https://ssrn.com/abstract=4730878."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.",
+      "name": "德文文獻",
+      "rule": [
+        {
+          "code": "4.1",
+          "name": "說明通則",
+          "rule": [
+            {
+              "code": "4.1.1",
+              "description": "德文註腳均不需斜體。"
+            },
+            {
+              "code": "4.1.2",
+              "description": "同一文獻有多位作者或編者時，應全部列出。"
+            },
+            {
+              "code": "4.1.3",
+              "description": "同一文獻有多位作者或編者時，「/」與英文「&」同義，其前後不加空白鍵。"
+            },
+            {
+              "code": "4.1.4",
+              "description": "期刊名稱應用縮寫，書名依習慣得用縮寫。"
+            },
+            {
+              "code": "4.1.5",
+              "description": "文獻之作者與編者，均僅呈現姓氏，如姓氏相同，再標示名字。"
+            }
+          ]
+        },
+        {
+          "code": "4.2",
+          "name": "法條",
+          "description": "依各法典習慣，分別採用§與Art.。項次以羅馬數字（Ⅰ, Ⅱ, Ⅲ, Ⅳ…）表示。其餘資訊（如款、目、句、分句），則以德文縮寫方式呈現。增修條文如§ 100a II Nr. 5a StPO，a之前不加空格。",
+          "format": "Art./§ {$article} {$paragraphRoman} {$abbrev} {$law}",
+          "example": [
+            "Art. 25 S. 2 HS. 2 GG",
+            "Art. 2 I i.V.m. Art. 1 I GG",
+            "Art. 12 II und III GG",
+            "Art. 13 II bis V, VII GG",
+            "§§ 97, 98 StPO",
+            "§ 100g II S. 2 Nr. 1 lit. a StPO"
+          ]
+        },
+        {
+          "code": "4.3",
+          "name": "判決",
+          "description": "依德國習慣（大致可分為完整裁判字號、裁判彙編、期刊收錄三種）。",
+          "format": "{$court}, {$decisionType} {$date} - {$caseNumber} -, Rn. {$pinpoint}.",
+          "example": {
+            "單一判決引用範例": [
+              "BVerfG, Beschluss des Zweiten Senats vom 17. März 2025 - 2 BvE 7/25 -, Rn. 1-7.",
+              "OLG München, Urteil v. 13. 01. 2011 - 29 U 4615/09.",
+              "BVerfGE 115, 320, 324 ff.",
+              "BVerfG, DÖV 2008, 56, 57."
+            ],
+            "複數判決引用範例": [
+              "BVerfG, DÖV 2008, 56, 57; DÖV 2012, 12; DÖV 2025, 56, 57."
+            ]
+          }
+        },
+        {
+          "code": "4.4",
+          "name": "書籍",
+          "description": "惟非連續編號之段碼，亦即同一書籍中有不只一個段碼1，請一併標示章節數。",
+          "format": "{$authorSurname}, {$fullTitle}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
+          "example": [
+            "Müller, Juristische Methodik, 6. Aufl., 1995, S. 10 ff.",
+            "Hufen, Staatsrecht II Grundrechte, 9. Aufl., 2021, § 39 Rn. 4."
+          ]
+        },
+        {
+          "code": "4.5",
+          "name": "專書論文",
+          "format": "{$authorSurname}, {$fullArticleTitle}, in: {$editor} (Hrsg.), {$fullBookTitle}, {$volume}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
+          "example": "Stern, Die Grundrechte und ihre Schranken, in: Badura/Dreier (Hrsg.), Festschrift 50 Jahre Bundesverfassungsgericht, Bd. II, 2001, S. 7-15."
+        },
+        {
+          "code": "4.6",
+          "name": "期刊論文",
+          "format": "{$authorSurname}, {$fullArticleTitle}, {$journalAbbrev}{$year}, （期數、卷數尊重作者）, S. {$page}（如欲引用該頁註腳，則應另外標示Fn. xx）.",
+          "example": [
+            "Lang/Englisch, Zur Verfassungswidrigkeit der neuen Mindestbesteuerung, StuW 2005, S. 3-24.",
+            "Ruland, Das Grundgesetz und die Entwicklung des Rentenversicherungsrechts, NZS 2010, S. 122 f., Fn. 10."
+          ]
+        },
+        {
+          "code": "4.7",
+          "name": "註釋書",
+          "description": "書名可寫法規名稱縮寫，應後綴Kommentar。若有慣用縮寫的註釋書，如慕尼黑註釋書MüKo，亦得採用。",
+          "format": "{$authorSurname}, in: {$editor}（全部列出，如果沒有主編就不用列）, {$commentaryTitle}, {$edition}, {$revisionOrYear}（Stand: Lfg.）, {$articleNumber} {$page或段碼Rn}.",
+          "example": [
+            "Klein, in: Maunz/Dürig, Grundgesetz Kommentar, Bd. III, Stand: Lfg. 38 März 2001, Art. 21 Rn. 188 ff.",
+            "Mayen, in: Scheurle/Mayen, TKG Kommentar, 2. Aufl., 2008, § 21 Rn. 18.",
+            "Düren, in: Tipke/Kruse, AO/FGO Kommentar, Bd. I, Stand: Lfg. 149 Juli 2016, Vor § 42 AO Rn. 38a."
+          ]
+        },
+        {
+          "code": "4.8",
+          "name": "前註",
+          "description": "不區分是否緊鄰前註。如前註為註釋書等多人合著作品，而後一註腳中欲引用段落之作者與前註不同者，則以「後註作者姓氏 (Fn. xxx), 引用頁或段碼.」方式引用。",
+          "format": "{$authorSurname} (Fn. {$noteNumber}), S. {$page或段碼Rn}.",
+          "example": "Alexy (Fn. 1), S. 55."
+        },
+        {
+          "code": "4.9",
+          "name": "轉引著",
+          "format": "{$sourceA}. 轉引自{$sourceB}.",
+          "example": "Weber, Die Dienst-und Leistungspflichten der Deutschen, 1943, S. 88. 轉引自Jakob, Sonderabgaben-Fremdkörper im Steuerstaat?, in: Kirchhof/Offerhaus/Schöberle (Hrsg.), Steuerrecht-Verfassungsrecht-Finanzpolitik: Festschrift für Franz Klein, 1994, S. 664."
+        },
+        {
+          "code": "4.10",
+          "name": "網頁文獻",
+          "description": "若無作者時，應改列網站名稱。",
+          "format": "{$author} ({$year}), {$title}, in {$url} (最後瀏覽日：{$accessDate}).",
+          "example": "Bundesverfassungsgericht (2025), Meilensteine in der Geschichte des Bundesverfassungsgerichts, in https://www.bundesverfassungsgericht.de/DE/DasBundesverfassungsgericht/Geschichte/geschichte_node.html (最後瀏覽日：2025/06/22)."
+        },
+        {
+          "code": "4.11",
+          "name": "譯著",
+          "rule": [
+            {
+              "code": "4.11.1",
+              "name": "作者可考",
+              "format": "{$authorSurname}，{$translator} (Übers.), {$editor} (Hrsg.), {$translatedTitle} ({$originalTitle}), {$year}, S. {$page或段碼Rn}.",
+              "example": "Locke, Hoffmann (Übers.), Euchner (Hrsg.), Zwei Abhandlungen über die Regierung (Two Treatises of Government), 1977, S. 69."
+            },
+            {
+              "code": "4.11.2",
+              "name": "作者不可考",
+              "format": "{$editorSurname} (Hrsg.), {$fullTitle}, Text und Übersetzung, {$volume}, {$edition}（初版無必要）, {$year}, S. {$page或段碼Rn}.",
+              "example": "Behrends/Knütel/Kupisch/Seiler (Hrsg.), Corpus Iuris Civilis, Text und Übersetzung, Bd. 2, 1995, S. 12."
+            }
+          ]
+        },
+        {
+          "code": "4.12",
+          "name": "議會公報",
+          "format": "{$documentName}+{$fileNumber}, S. {$page}.",
+          "example": [
+            "Plenarprotokoll des Bundesrates 4/2025, S. 105.",
+            "BT-Drs. 18/9097, S. 30."
+          ]
+        },
+        {
+          "code": "4.13",
+          "name": "報紙",
+          "description": "電子報請依網頁文獻之格式（4.9）。",
+          "format": "{$authorSurname}: {$articleTitle}, in: {$newspaper}, {$year}/{$month}/{$day}, S. {$page}.",
+          "example": "Schmidt: Der Weg zum Bachelor. Tipps für ein erfolgreiches Studium, in: Nürnberger Neuigkeiten, 2019/10/06, S. 19-23."
+        },
+        {
+          "code": "4.14",
+          "name": "其他文獻",
+          "rule": [
+            {
+              "code": "4.14.1",
+              "name": "柏拉圖（Stephanus-Paginierung）",
+              "description": "著作名（可縮寫）+Stephanus版中的引用頁+段落（a, b, c, d）+行數（非必要）。由於理想國（Politeia）與法律篇（Nomoi）篇幅較大，引用時會以羅馬數字標示引用頁所在的書號。",
+              "format": "{$workAbbrev} {$stephanusPage}{$paragraph}{$line}",
+              "example": [
+                "Politikos 268e7",
+                "Politeia VI 509b9"
+              ]
+            },
+            {
+              "code": "4.14.2",
+              "name": "亞里士多德（Bekker-Zählung）",
+              "description": "著作名（通常為縮寫）+Bekker版中的引用頁+段落（a, b, c, d）+行數。",
+              "format": "{$workAbbrev} {$bekkerPage}{$paragraph}-{$line}",
+              "example": "NE 1135b12-17"
+            },
+            {
+              "code": "4.14.3",
+              "name": "康德",
+              "description": "版本（通常為Akademieausgabe）+冊數（羅馬數字）, 引用頁. (行數)。著作縮寫例如：道德形上學（MS）、論永久和平（ZeF）、單純理性限度內的宗教（RGV）。",
+              "format": "{$workAbbrev}, AA {$volumeRoman}, {$page}. ({$lines})",
+              "example": "MS, AA IV, 331. (5-12)"
+            },
+            {
+              "code": "4.14.4",
+              "name": "尼采",
+              "description": "尼采全集的版本縮寫+冊數+著作名, S. 引用頁.",
+              "format": "{$editionAbbrev} {$volume} {$workAbbrev}, S. {$page}.",
+              "example": "KSA 1 GT, S. 124."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.",
+      "name": "日文文獻",
+      "rule": [
+        {
+          "code": "5.1",
+          "name": "說明通則",
+          "rule": [
+            {
+              "code": "5.1.1",
+              "description": "引註記載資訊的項目、順序、書刊名稱略語等，本小組建議參照現行政大法學評論論文註解範式，以及法律編集者懇話会編『法律文献等の出典の表示方法』(2014)。"
+            },
+            {
+              "code": "5.1.2",
+              "name": "關於格式部分的共識",
+              "rule": [
+                {
+                  "code": "5.1.2.1",
+                  "description": "年代一律用西元紀年。但判決使用日本紀元年號部分，依其正式案號記載方式，不改寫加註。"
+                },
+                {
+                  "code": "5.1.2.2",
+                  "description": "期刊、書籍年代月份：僅寫出年代數字，省略「年」字，不記載月份。"
+                },
+                {
+                  "code": "5.1.2.3",
+                  "description": "副標題應記載；主、副標題間可以用全形冒號，或照原文使用全形破折號（ダッシュ（全角）—）區分，不使用副標題前後的重複短dash或波浪符號（全角チルダ）；使用全形破折號時，應注意避免與長音符「ー」以及漢字「一」混淆。"
+                },
+                {
+                  "code": "5.1.2.4",
+                  "description": "不記載期刊的特集資訊，期刊、裁判彙編等刊名記載全名。"
+                },
+                {
+                  "code": "5.1.2.5",
+                  "description": "句號：引用日文文獻時，需確認全部使用日文字型。但文獻結尾均使用中文字型句號。"
+                },
+                {
+                  "code": "5.1.2.6",
+                  "description": "括號：若括號內有全形字時使用全形；若無（例如僅有數字、羅馬字母時）使用半形，與『出典』採用全形括號不同。"
+                },
+                {
+                  "code": "5.1.2.7",
+                  "description": "數字：除標題內使用得出現全形數字以外，版、卷、期、與頁次一律使用半形數字。"
+                },
+                {
+                  "code": "5.1.2.8",
+                  "description": "保留「巻」、「号」，不記載「第」。同時有「巻」、「号」與連續編號的期刊，僅記載「巻」、「号」。"
+                },
+                {
+                  "code": "5.1.2.9",
+                  "description": "使用中黑點（．）取代=（多位作者、「国家73巻7=8号1頁」應作「国家73巻7・8号1頁」）。"
+                },
+                {
+                  "code": "5.1.2.10",
+                  "description": "標題、副標題使用單引號時依原文。"
+                },
+                {
+                  "code": "5.1.2.11",
+                  "description": "頁次先於出版年。"
+                },
+                {
+                  "code": "5.1.2.12",
+                  "description": "在正文第一次提及時寫出法令全名；推薦使用『出典』收錄的略語。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5.2",
+          "name": "法條",
+          "description": "限於在註釋中引用時。參照『出典』15頁以下之法律、條約等名稱略語，條項款目次均使用半形數字，省略「第」。",
+          "format": "{$lawAbbrev}{$article}条{$item}号。",
+          "example": "著作43条2号。"
+        },
+        {
+          "code": "5.3",
+          "name": "判決",
+          "description": "限於在註釋中引用時。參照『出典』14頁以下的年月日格式。判決請一律提供出處。除常用彙編以外，出處為網站或資料庫時，請參考下列範例，不按一般網路文獻格式引用。",
+          "rule": [
+            {
+              "code": "5.3.1",
+              "name": "一般（裁判彙編）",
+              "description": [
+                "限於在註釋中引用時。參照『出典』14頁以下的年月日格式。判決請一律提供出處。除常用彙編以外，出處為網站或資料庫時，請參考下列範例，不按一般網路文獻格式引用。"
+              ],
+              "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日{$reporter}{$volume}巻{$issue}号{$page}頁。",
+              "example": [
+                "最大判平成22年1月20日民集64巻1号1頁。",
+                "福岡高宮崎支判平成22年1月29日金判1349号49頁。",
+                "大判大正12年4月30日刑集2巻378頁。"
+              ]
+            },
+            {
+              "code": "5.3.2",
+              "name": "網站或資料庫（LEX/DB、TKC）",
+              "description": [
+                "限於在註釋中引用時。參照『出典』14頁以下的年月日格式。判決請一律提供出處。除常用彙編以外，出處為網站或資料庫時，請參考下列範例，不按一般網路文獻格式引用。",
+                "格式中LEX/DB與號碼之間空半形1格。"
+              ],
+              "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日LEX/DB {$number}。",
+              "example": "東京地判令和4年8月30日LEX/DB 25593703。"
+            },
+            {
+              "code": "5.3.3",
+              "name": "網站或資料庫（最高裁HP）",
+              "description": [
+                "限於在註釋中引用時。參照『出典』14頁以下的年月日格式。判決請一律提供出處。除常用彙編以外，出處為網站或資料庫時，請參考下列範例，不按一般網路文獻格式引用。",
+                "請於文章中註明可得特定之相關資訊。"
+              ],
+              "format": "{$court}{$decisionType}{$japaneseEra}{$year}年{$month}月{$day}日最高裁HP。",
+              "example": "東京高判平成14年4月11日最高裁HP。"
+            }
+          ]
+        },
+        {
+          "code": "5.4",
+          "name": "專書",
+          "rule": [
+            {
+              "code": "5.4.1",
+              "name": "獨著",
+              "format": "{$author}『{$bookTitle}』{$page}頁（{$edition}版，発行年{$year}）。",
+              "example": "塩野宏『行政法（１）行政法総論』121頁（5版，2009）。"
+            },
+            {
+              "code": "5.4.2",
+              "name": "合著",
+              "format": "{$authorA}・{$authorB}『{$bookTitle}』{$page}頁({$year})。",
+              "example": "小野昌延・松村信夫『新・不正競争防止法概説』91頁(2011)。"
+            }
+          ]
+        },
+        {
+          "code": "5.5",
+          "name": "翻譯",
+          "format": "{$author}著（{$translator}訳）『{$bookTitle}』{$page}頁（{$edition}版，発行年{$year}）。",
+          "example": "オッコー・ベーレンツ著（河上正二訳）『歴史の中の民法—ローマ法との対話』73頁(2001)。"
+        },
+        {
+          "code": "5.6",
+          "name": "期刊論文",
+          "description": "引用全篇時需載明起迄頁，不使用以下。若已另行結集成書，應選擇其中一個版本引用。",
+          "format": "{$author}「{$articleTitle}」{$journal}{$volume}巻（若有）{$issue}号{$page}頁(発行年{$year})。",
+          "example": [
+            "山口厚｢刑法典—過去・現在とその課題｣ジュリスト1348号2-7頁(2008)。",
+            "大村敦志｢大きな公共性から小さな公共性へ—「憲法と民法」から出発して｣法律時報76巻2号71-77頁(2004)。"
+          ]
+        },
+        {
+          "code": "5.7",
+          "name": "專書論文",
+          "description": "一般格式如下，但下列特殊類型請參照範例。",
+          "rule": [
+            {
+              "code": "5.7.1",
+              "name": "一般",
+              "description": [
+                "一般格式如下，但下列特殊類型請參照範例。"
+              ],
+              "format": "{$author}「{$articleTitle}」{$editor}編『{$bookTitle}』{$page}頁(発行年{$year})。",
+              "example": "岡部喜代子｢共同相続財産の占有をめぐる諸問題｣野田愛子ほか編『新家族法実務大系〔３〕相続〔１〕相続・遺産分割』137頁(2008)。"
+            },
+            {
+              "code": "5.7.2",
+              "name": "講座（參照期刊論文）",
+              "description": [
+                "一般格式如下，但下列特殊類型請參照範例。",
+                "代表編者與單篇作者為同一人時，仍分別記載。"
+              ],
+              "format": "{$author}「{$articleTitle}」{$seriesEditor}編『{$seriesTitle}』{$page}頁({$year})。",
+              "example": [
+                "土井真一「日本国憲法と国民の司法参加—法の支配の担い手に関する覚書」土井真一編『岩波講座憲法４変容：する統治システム』235頁(2007)。",
+                "梶村太市「和解・調停と要件事実」伊藤滋夫ほか編『民事要件事実講座（２）—総論（２）』210頁(2005)。"
+              ]
+            },
+            {
+              "code": "5.7.3",
+              "name": "註釋書（參照獨著）",
+              "description": [
+                "一般格式如下，但下列特殊類型請參照範例。"
+              ],
+              "format": "{$editor}編『{$commentaryTitle}』{$page}頁〔{$author}執筆〕({$year})。",
+              "example": "江頭憲治郎編『会社法コンメンタール６—新株予約権§§236–294』16頁〔江頭憲治郎執筆〕(2009)。"
+            },
+            {
+              "code": "5.7.4",
+              "name": "祝賀論文集",
+              "description": [
+                "一般格式如下，但下列特殊類型請參照範例。"
+              ],
+              "format": "{$author}｢{$articleTitle}｣{$honoree}先生古稀記念『{$bookTitle}』{$page}頁({$year})。",
+              "example": "平井宜雄｢債権者代位権の理論的位置—解約返戻金支払請求権の差押および代位請求を手がかりとして｣加藤一郎先生古稀記念『現代社会と民法学の動向〔下〕—民法一般』223頁(1992)。"
+            }
+          ]
+        },
+        {
+          "code": "5.8",
+          "name": "判例研究",
+          "rule": [
+            {
+              "code": "5.8.1",
+              "name": "期刊型",
+              "format": "{$author}｢{$noteTitle}[{$court}{$decisionDate}判決]｣{$journal}{$volume}巻{$issue}号{$page}頁({$year})。",
+              "example": "髙部眞規子｢民事再生法上の共益債権を弁済により代位した者が民事再生手続によることなくこれを行使することの可否[大阪地裁平成21.9.4判決]｣金融法務事情58巻11号26-37頁(2010)。"
+            },
+            {
+              "code": "5.8.2",
+              "name": "單行本型",
+              "format": "{$editor}編著『{$bookTitle}』{$page}頁({$year})。",
+              "example": "東京・大阪医療訴訟研究会編著『医療訴訟ケースファイルVol.3』127頁(2010)。"
+            }
+          ]
+        },
+        {
+          "code": "5.9",
+          "name": "座談會",
+          "format": "{$participants}ほか｢{$title}｣{$journal}{$volume}巻{$issue}号{$page}頁〔{$speaker}発言〕({$year})。",
+          "example": "綿貫芳源ほか｢行政事件訴訟法を見直す（下）｣自治研究76巻6号18頁〔園部逸夫発言〕(2000)。"
+        },
+        {
+          "code": "5.10",
+          "name": "參照前註",
+          "description": "若同一註釋中引用同一作者之多篇期刊論文，例如連載論文時可增加簡略篇名為：作者姓名・前掲注(N)「簡略篇名」N頁。如文獻同時有編者與著者，則引用前註時僅列出著者。",
+          "format": "{$author}・前掲注({$noteNumber}){$page}頁。",
+          "example": "碓井光明・前掲注(16)141頁。"
+        },
+        {
+          "code": "5.11",
+          "name": "網路文獻",
+          "description": "網路文獻仍以中文文獻 2.15 部分為主，僅「最後瀏覽日」使用中文字型。",
+          "format": "（依中文文獻 2.15 之格式，僅「最後瀏覽日」使用中文字型）",
+          "example": "法務省法制審議会，民法（債権関係）部会第68回会議議事録，頁33（鹿野幹事發言），https://www.moj.go.jp/content/000113298.pdf（最後瀏覽日：2025/07/11）。"
+        }
+      ]
+    },
+    {
+      "code": "6.",
+      "name": "法文文獻",
+      "rule": [
+        {
+          "code": "6.1",
+          "name": "說明通則",
+          "rule": [
+            {
+              "code": "6.1.1",
+              "description": "法令規章引用方式、書刊名稱略語、以及不同性質資料的分隔符號 (séparateur)等部分，本小組建議原則參照法國出版者協會(SNE)編纂的法律參考資訊編輯指南(Ref-Lex)（最近一次更新為2026年）。Syndicat national de l'Edition, REFLEX: Guide de rédaction des références juridiques, 30 mars 2026."
+            },
+            {
+              "code": "6.1.2",
+              "description": "法文格式部分，大寫字不加重音符號（使用l'Etat 而非l'État；Age 而非 Âge）。序數可上標或不上標，例如1er, 1er, 3ème, 3ème, 5e, 5e。"
+            },
+            {
+              "code": "6.1.3",
+              "name": "標點符號使用方式",
+              "rule": [
+                {
+                  "code": "6.1.3.1",
+                  "name": "同類型文獻間",
+                  "description": "法條、判決等官方文件之間，或專書、論文等文獻之間，使用分號 [;] (point-virgule) 區隔。",
+                  "format": "{$citationA}; {$citationB}",
+                  "example": [
+                    "C. trav., art. R.* 1233-3-4; L. n° 2015-177, 16 févr. 2015; Rép. min. n° 81548: JOAN, 23 juin 2015, 4769, A. Santini.",
+                    "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 556; G. Raymond, Droit de l'enfance et de l'adolescence, 5e éd., 2006, 452."
+                  ]
+                },
+                {
+                  "code": "6.1.3.2",
+                  "name": "官方文件刊載於特定媒介",
+                  "description": "官方文件與刊載媒介之間，使用冒號 [:] (deux-points) 區隔。",
+                  "format": "{$officialDocument}: {$publicationMedium}",
+                  "example": "L. n° 2016-162, 19 févr. 2016, prorogeant l'application de la loi n° 55-385 du 3 avril 1955 relative à l'état d'urgence, NOR: INTX1602418L: JO n° 0043, 20 févr. 2016 CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100"
+                },
+                {
+                  "code": "6.1.3.3",
+                  "name": "不同組文獻之間",
+                  "description": "官方文件與文獻為一組時，不同組之間使用破折號 [–] (demi-cadratin; en dash) 區隔。",
+                  "format": "{$groupA} – {$groupB}",
+                  "example": "CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100– L. n° 2015-177, 16 févr. 2015: Comm. com. électr. 2010, repère 10; Dr. famille 2010, prat. 8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6.2",
+          "name": "法條",
+          "rule": [
+            {
+              "code": "6.2.1",
+              "name": "已編入法典",
+              "format": "{$codeAbbrev}, art. {$article}{$paragraph}",
+              "example": [
+                "CMP, art. 35, II",
+                "CSP, art. L. 1131-2-1, al. 4",
+                "CSS, art. L. 162-12-15, al. 5",
+                "C. trav., art. R.* 1233-3-4",
+                "CGCT, art. D. 1115-1",
+                "C. arb. sport, art. 44.2",
+                "CGI, ann. II, art. 96 ter A"
+              ]
+            },
+            {
+              "code": "6.2.2",
+              "name": "有時序號的法令",
+              "format": "{$lawTypeAbbrev} n° {$number}, {$date}, {$title}",
+              "example": [
+                "L. const. n° 2008-724, 23 juill. 2008",
+                "L. org. n° 2014-1392, 24 nov. 2014, portant application de l’article 68 de la Constitution",
+                "L. n° 2015-177, 16 févr. 2015, art. 1er, I, 1°, b",
+                "L. fin. 2014 n° 2013-1278, 29 déc. 2013",
+                "LFSS 2015 n° 2014-1554, 22 déc. 2014",
+                "L. DADDUE n° 2013-619, 16 juill. 2013, NOR: DEVK1240259L",
+                "L. DMOS n° 93-121, 27 janv. 1993, portant diverses mesures d’ordre social",
+                "D. n° 2015-261, 5 mars 2015, relatif au fonctionnement et à l’organisation des tribunaux maritimes",
+                "D.-L. n° 55-888, 20 mai 1955, concernant la recherche et l’exploitation des substances minérales",
+                "Ord. n° 58-1067, 7 nov. 1958"
+              ]
+            },
+            {
+              "code": "6.2.3",
+              "name": "無時序號的法令",
+              "format": "{$lawTypeAbbrev}, {$date}, {$title}, NOR: {$norNumber}",
+              "example": [
+                "D., 17 juill. 2008, tendant à soumettre un projet de loi constitutionnelle au Parlement réuni en Congrès, NOR: HRUX0817196D",
+                "A., 28 août 2006, fixant la liste des renseignements et des documents pouvant être demandés aux candidats aux marchés passés par les pouvoirs adjudicateurs, NOR: ECOM0620008A",
+                "Circ., 31 juill. 2015, relative aux contrôles dans les exploitations agricoles, NOR: PRMX1519017C",
+                "Circ. n° 5788-SG, 12 mai 2015, relative à l’apprentissage dans la fonction publique de l’Etat: mobilisation pour la rentrée 2015"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6.3",
+          "name": "公報",
+          "description": "涉及部會向國會答詢時使用JOAN/JO Sénat。號次以2015年以前用編號或頁標示。",
+          "format": "{$gazetteAbbrev} [n° {$number}], {$date}, {$pageOrTextNumber}.",
+          "example": [
+            "JO n° 0116, 21 mai 2015, texte n° 1",
+            "JO n° 0152, 3 juill. 2015, 11201",
+            "JO n° 0261, 10 nov. 2015, texte n° 2, 20938",
+            "JOAN, 23 juin 2015, 4769",
+            "JO Sénat, 17 juill. 2015, 7771"
+          ]
+        },
+        {
+          "code": "6.4",
+          "name": "未刊行於公報的提案",
+          "format": "Projet de loi/Proposition de loi {$chamber}, {$sessionYears}, {$title}, {$url}",
+          "example": "Proposition de loi Sénat n° 680, 2014-2015, tendant à garantir le respect du domicile, https://www.senat.fr/leg/ppl14-680.html"
+        },
+        {
+          "code": "6.5",
+          "name": "法國各級法院判決",
+          "description": "行政訴訟判決當事人為法人時，得記載當事人名稱，其組織型態如公司、協會、地方commune等可採略語。",
+          "format": "{$court}, {$formation}, {$date}, n° {$caseNumber}, {$partyName}.",
+          "example": [
+            "Cons. const., 8 août 1985, n° 85-196 DC",
+            "Cass. crim., QPC, 9 nov. 2013, n° 13-84.909",
+            "CA Paris, 4-1, 11 mars 2016, n° 13/167377",
+            "CE, ass., 17 juin 2015, n° 384826, Société La Chaîne Info (LCI)."
+          ]
+        },
+        {
+          "code": "6.6",
+          "name": "裁判彙編",
+          "format": "{$reporterAbbrev}, {$year或volume}, {$page或number}",
+          "example": [
+            "Rec. Cons. const., 2014, 104",
+            "Bull. civ. II, n° 12",
+            "Lebon, 512"
+          ]
+        },
+        {
+          "code": "6.7",
+          "name": "期刊論文",
+          "rule": [
+            {
+              "code": "6.7.1",
+              "name": "作為主要參考資料引用時",
+              "description": "期刊為連續編號時，可不記載出版月。",
+              "format": "{$author}, {$title}, {$journalAbbrev} {$month} {$year}, ({$issue}), {$number}, {$page}.",
+              "example": [
+                "L. Cadiet, Le principe de loyauté devant le juge civil et le juge commercial, Procédures 2015, dossier 10.",
+                "P. Hurlin-Sanchez, Répartition des sièges dans les intercommunalités, le calme avant la tempête?, CFP 2014, n° 344, 54.",
+                "P. Lagarde, Les principes de base du nouveau règlement européen sur les successions, Rev. Crit. DIP 2014, 700."
+              ]
+            },
+            {
+              "code": "6.7.2",
+              "name": "附帶引用時（法令判解之介紹、評釋等）",
+              "format": "{$journalAbbrev} {$monthAbbrev} {$year}, ({$issue}), {$category}, {$pageOrNumber}, {$noteType}（若需要）, {$author}（若需要）.",
+              "example": [
+                "AJDA 2015, 100.",
+                "CFP 2014, n° 344, 54.",
+                "Comm. com. électr. 2010, repère 10.",
+                "D. 2015, Pan., 100, obs. E. Chevrier.",
+                "JCP G 2006, doctr. 100.",
+                "RLDI 2015/2, n° 100."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "6.8",
+          "name": "專書、研討會論文",
+          "format": "{$author}, {$articleTitle}, in {$editor}（兩人以上則第二人以後皆省略）et a. (dir.), {$bookOrConferenceTitle}, {$year}, {$page}.",
+          "example": "F. Blanco, Les vicissitudes de la conciliation médicale, in C. Castaing et a. (dir.), Mélanges en l’honneur de Jean-Marie Clément, 2014, Les Etudes hospitalières, 23."
+        },
+        {
+          "code": "6.9",
+          "name": "專書",
+          "format": "{$authorOrEditor}(dir), {$bookTitle}, {$year}, {$translator}[trad.]（若有）, {$volume}（若有）, {$edition}éd., {$year2}, {$page}.",
+          "example": [
+            "P.-Y. Gautier, Propriété littéraire et artistique, vol. 1, 9e éd., 2015, 357.",
+            "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 456.",
+            "P. Mbongo et a. (dir.), Dictionnaire encyclopédique de l’Etat, 2014, 198."
+          ]
+        },
+        {
+          "code": "6.10",
+          "name": "學位論文",
+          "format": "{$author}, {$thesisType}（thèse/mémoire）, {$year}, {$institutionOrPublisher}, {$prefaceAuthor}[préf.]（已出版時）, {$degreeName}（未出版時）, {$page}.",
+          "example": {
+            "已出版博士論文": "B. Defoort, La décision administrative, thèse, 2015, LGDJ, 706.",
+            "已出版有序言": "J. Laurent, La propriété des droits, thèse, 2012, LGDJ, préf. T. Revet, 68.",
+            "未出版碩士論文": "N. Mathe, La fraude à la TVA, mémoire, 2011, Université Toulouse 1 Capitole, Master 2 Droit fondamental des affaires."
+          }
+        },
+        {
+          "code": "6.11",
+          "name": "多人合著",
+          "format": "{$leadAuthor}（兩人以上則第二人以後皆省略）et a., {$bookTitle}, {$edition}éd., {$year}, {$page}.",
+          "example": [
+            "S. Berre et a., Environnement économique et managérial du notariat, 2014, 301.",
+            "Collectif, Code pénal 2016, 112e éd., 2015, Codes Dalloz.（著者不詳時）"
+          ]
+        },
+        {
+          "code": "6.12",
+          "name": "百科全書、彙編類著作",
+          "format": "{$workTitle}, {$volume}, {$book}, {$entryOrKeyword}, {$pageOrNumber}, {$author}（若有必要）.",
+          "example": [
+            "TP TI service pénal, fasc. Tribunal de police, n° 53.",
+            "Doc. fisc. Lefebvre, FONC-II-612.",
+            "FM Litec Droit pharmaceutique, Fasc. 38.",
+            "JCl. Civil Code Formulaire, Fasc. 300.",
+            "Joly Contrats internationaux, livre 1, Le contrat international, n° 120.",
+            "FM Litec Discours et Agenda du Maire, V° Conseil municipal, fasc. 10."
+          ]
+        },
+        {
+          "code": "6.13",
+          "name": "電子資源",
+          "format": "{$author}, {$title}, {$platform}, {$section}.",
+          "example": {
+            "作為主要參考資料引用時": [
+              "D. Legeais, Contrats de distribution, JCl. Commercial, Synthèse 50.",
+              "T. Simon, Focus Petit guide de survie des POS, Actualités, Légibase Urbanisme, 1er oct. 2015."
+            ],
+            "附帶引用": [
+              "Dalloz actualité, 1er févr. 2015, obs. E. Chevrier.",
+              "www.elnet.fr",
+              "Légibase Etat civil, Fiche pratique Déclaration de naissance, 8 oct. 2015."
+            ]
+          }
+        },
+        {
+          "code": "6.14",
+          "name": "前註引用",
+          "format": "{$authorSurname}, supra note {$noteNumber}, {$page}.",
+          "example": "Hurlin-Sanchez, supra note 23, 55."
+        }
+      ]
     }
-  }
+  ]
 }
