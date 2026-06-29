@@ -335,14 +335,26 @@
           "code": "3.2",
           "name": "法條和判決",
           "description": "依該國／該區域／該組織／該機關所提供之引註格式。但應包含必要之資訊。超國家層級與國際公約、條約等規範文件依該組織／該機關所提供之引註格式。判決於本文及註腳引用時，均不須使用斜體。",
-          "format": "依該國／該區域／該組織／該機關所提供之引註格式。但應包含必要之資訊。",
-          "example": [
-            "US: 28 U.S.C. § 1291 (2012).",
-            "Dobbs v. Jackson Women’s Health Organization, 597 U.S. 215 (2022).",
-            "UK: Human Rights Act 1998, s 15(1)(b).",
-            "For Women Scotland Ltd v. The Scottish Ministers [2025] UKSC 16.",
-            "UN: United Nations General Assembly, <span class=\"italic\">Restoration of the lawful rights of the People’s Republic of China in the United Nations</span>, GA Res 2758 (XXVI), UN Doc A/RES/2758(XXVI) (25 October 1971)."
-          ]
+          "multipleTypeExample": [
+            {
+              "type": "US",
+              "example": [
+                "28 U.S.C. § 1291 (2012).",
+                "Dobbs v. Jackson Women’s Health Organization, 597 U.S. 215 (2022)."
+              ]
+            },
+            {
+              "type": "UK",
+              "example": [
+                "Human Rights Act 1998, s 15(1)(b).",
+                "For Women Scotland Ltd v. The Scottish Ministers [2025] UKSC 16."
+              ]
+            },
+            {
+              "type": "UN",
+              "example": "United Nations General Assembly, <span class=\"italic\">Restoration of the lawful rights of the People’s Republic of China in the United Nations</span>, GA Res 2758 (XXVI), UN Doc A/RES/2758(XXVI) (25 October 1971)."
+            }
+		      ]
         },
         {
           "code": "3.3",
@@ -355,7 +367,7 @@
               "description": "作者姓名[小型大寫字] , 書名[小型大寫字]  引用頁數 (版次 出版年份).",
               "format": "<span class=\"smallcaps\">{$author}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year}).",
               "example": [
-                "<span class=\"smallcaps\">Mary Anne Franks, Fearless Speech: Breaking Free from the First Amendment</span> (2024).",
+                "<span class=\"smallcaps\">Mary Anne Franks</span>, <span class=\"smallcaps\">Fearless Speech: Breaking Free from the First Amendment</span> (2024).",
                 "<span class=\"smallcaps\">Catharine A. MacKinnon</span>, <span class=\"smallcaps\">Feminism Unmodified: Discourses on Life and Law</span> 34 (1987)."
               ]
             },
@@ -377,8 +389,8 @@
                 "<span class=\"smallcaps\">{$authorA}</span>, <span class=\"smallcaps\">{$authorB}</span> &amp; <span class=\"smallcaps\">{$authorC}</span>, <span class=\"smallcaps\">{$title}</span> {$page} ({$edition} {$year})."
               ],
               "example": [
-                "Richard H. Fallon, Jr., John F. Manning, Daniel J. Meltzer &amp; David L. Shapiro, <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009).",
-                "Richard H. Fallon, Jr. et al., <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009)."
+                "<span class=\"smallcaps\">Richard H. Fallon, Jr.</span>, <span class=\"smallcaps\">John F. Manning</span>, <span class=\"smallcaps\">Daniel J. Meltzer</span> &amp; <span class=\"smallcaps\">David L. Shapiro</span>, <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009).",
+                "<span class=\"smallcaps\">Richard H. Fallon, Jr.</span> <span class=\"smallcaps\">et al.</span>, <span class=\"smallcaps\">Hart and Wechsler</span><span class=\"smallcaps\">’s The Federal Courts and the Federal System</span> 330 (6th ed. 2009)."
               ]
             }
           ]
