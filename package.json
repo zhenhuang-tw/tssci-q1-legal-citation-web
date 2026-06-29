@@ -19,6 +19,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@nuxt/fonts": "^0.14.0",
     "prettier": "^3.8.5"
   }
 }

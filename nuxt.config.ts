@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-06-28',
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxt/fonts'],
   css: ['@picocss/pico/css/pico.fluid.classless.pumpkin.min.css', '~/assets/css/main.css'],
   typescript: {
     strict: true,
@@ -51,5 +51,20 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/robots.txt', '/citations'],
     },
+  },
+
+  fonts: {
+    // 強制優先使用 bunny 提供商
+    provider: 'bunny',
+
+    families: [
+      {
+        name: 'Gentium Book Basic',
+        provider: 'bunny',
+        // 明確指定您會用到的粗體與斜體組合
+        weights: [400, 700],
+        styles: ['normal', 'italic'],
+      },
+    ],
   },
 })
