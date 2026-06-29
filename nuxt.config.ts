@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-const ASSET_BASE_URL = 'https://assets.zhenhuang.tw/tscii-legal-citation'
+const ASSET_BASE_URL = 'https://assets.zhenhuang.tw/legal-citation/web-viewer-favicon'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-28',

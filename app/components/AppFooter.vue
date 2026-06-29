@@ -8,7 +8,7 @@
     <p>
       <small>
         <a
-          href="https://github.com/zhenhuang-tw/tscii-legal-citation-web"
+          https://github.com/zhenhuang-tw/tssci-q1-legal-citation-web
           target="_blank"
           rel="noopener"
         >

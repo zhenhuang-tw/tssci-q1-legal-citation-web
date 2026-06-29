@@ -24,7 +24,7 @@
 ## 目錄結構
 
 ```
-tssci-legal-citation-web/
+tssci-q1-legal-citation-web/
 ├── app/
 │   ├── assets/
 │   │   └── css/
