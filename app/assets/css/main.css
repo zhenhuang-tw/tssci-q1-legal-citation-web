@@ -9,6 +9,14 @@ body {
   padding: 0 1rem;
 }
 
+span.smallcaps {
+  font-variant: small-caps;
+}
+
+span.italic {
+  font-style: italic;
+}
+
 /* ---- AppHeader sticky ---- */
 header[data-sticky] {
   position: sticky;
