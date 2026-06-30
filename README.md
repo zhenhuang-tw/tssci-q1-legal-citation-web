@@ -10,7 +10,7 @@
 
 ## 如何查閱
 
-請點選[TSSCI Q1 法學引註格式檢索](https://lawcite.zhenhuang.tw/)來查看。網站首頁簡要介紹專案，查詢頁面則提供依語言、依參考文獻類型來顯示的篩選功能。
+請點選〈[TSSCI Q1 法學引註格式](https://legalcite.zhenhuang.tw/)〉來查看。網站首頁簡要介紹專案，查詢頁面則提供依語言、依參考文獻類型來顯示的篩選功能。
 
 ## Tech Stack
 
