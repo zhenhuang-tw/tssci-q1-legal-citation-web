@@ -926,24 +926,25 @@
                   "code": "6.1.3.1",
                   "name": "同類型文獻間",
                   "description": "法條、判決等官方文件之間，或專書、論文等文獻之間，使用分號 [;] (point-virgule) 區隔。",
-                  "format": "{$citationA}; {$citationB}",
                   "example": [
                     "C. trav., art. R.* 1233-3-4; L. n° 2015-177, 16 févr. 2015; Rép. min. n° 81548: JOAN, 23 juin 2015, 4769, A. Santini.",
-                    "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 556; G. Raymond, Droit de l'enfance et de l'adolescence, 5e éd., 2006, 452."
+                    "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 556; G. Raymond, Droit de l’enfance et de l’adolescence, 5e éd., 2006, 452."
                   ]
                 },
                 {
                   "code": "6.1.3.2",
                   "name": "官方文件刊載於特定媒介",
                   "description": "官方文件與刊載媒介之間，使用冒號 [:] (deux-points) 區隔。",
-                  "format": "{$officialDocument}: {$publicationMedium}",
-                  "example": "L. n° 2016-162, 19 févr. 2016, prorogeant l'application de la loi n° 55-385 du 3 avril 1955 relative à l'état d'urgence, NOR: INTX1602418L: JO n° 0043, 20 févr. 2016 CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100"
+                  "example": [
+                    "L. n° 2016-162, 19 févr. 2016, prorogeant l’application de la loi n° 55-385 du 3 avril 1955 relative à l’état d’urgence, NOR: INTX1602418L: JO n° 0043, 20 févr. 2016",
+                    "CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100"
+                  ],
+                  "webNote": "原文件的這兩個範例間，並沒有區隔，本網站逕予區隔。"
                 },
                 {
                   "code": "6.1.3.3",
                   "name": "不同組文獻之間",
                   "description": "官方文件與文獻為一組時，不同組之間使用破折號 [–] (demi-cadratin; en dash) 區隔。",
-                  "format": "{$groupA} – {$groupB}",
                   "example": "CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100– L. n° 2015-177, 16 févr. 2015: Comm. com. électr. 2010, repère 10; Dr. famille 2010, prat. 8"
                 }
               ]
@@ -1022,7 +1023,7 @@
           "code": "6.5",
           "name": "法國各級法院判決",
           "description": "行政訴訟判決當事人為法人時，得記載當事人名稱，其組織型態如公司、協會、地方commune等可採略語。",
-          "format": "{$court}, {$formation}, {$date}, n° {$caseNumber}, {$partyName}.",
+          "format": "{$court}, {$type}(可能), {$date}, n° {$caseNumber}, {$partyName}.",
           "example": [
             "Cons. const., 8 août 1985, n° 85-196 DC",
             "Cass. crim., QPC, 9 nov. 2013, n° 13-84.909",
@@ -1043,52 +1044,50 @@
         {
           "code": "6.7",
           "name": "期刊論文",
-          "rule": [
-            {
-              "code": "6.7.1",
-              "name": "作為主要參考資料引用時",
-              "description": "期刊為連續編號時，可不記載出版月。",
-              "format": "{$author}, {$title}, {$journalAbbrev} {$month} {$year}, ({$issue}), {$number}, {$page}.",
-              "example": [
-                "L. Cadiet, Le principe de loyauté devant le juge civil et le juge commercial, Procédures 2015, dossier 10.",
-                "P. Hurlin-Sanchez, Répartition des sièges dans les intercommunalités, le calme avant la tempête?, CFP 2014, n° 344, 54.",
-                "P. Lagarde, Les principes de base du nouveau règlement européen sur les successions, Rev. Crit. DIP 2014, 700."
-              ]
-            },
-            {
-              "code": "6.7.2",
-              "name": "附帶引用時（法令判解之介紹、評釋等）",
-              "format": "{$journalAbbrev} {$monthAbbrev} {$year}, ({$issue}), {$category}, {$pageOrNumber}, {$noteType}（若需要）, {$author}（若需要）.",
-              "example": [
-                "AJDA 2015, 100.",
-                "CFP 2014, n° 344, 54.",
-                "Comm. com. électr. 2010, repère 10.",
-                "D. 2015, Pan., 100, obs. E. Chevrier.",
-                "JCP G 2006, doctr. 100.",
-                "RLDI 2015/2, n° 100."
-              ]
-            }
-          ]
+          "description": [
+            "（期刊為連續編號時，可不記載出版月）",
+            "作為主要參考資料引用時：作者|, 篇名|, 刊名| 出版月以數字表示 年YYYY|, 期(n° X)|, 編號（若有）| 頁.",
+            "附帶引用時（法令判解之介紹、評釋等）：刊名| 出版月縮寫 年 YYYY|, 期(n° X)|, 專欄別|, 頁或編號|, 論文分類（若需要）|, 作者（若需要）."
+          ],
+          "example": {
+            "作為主要參考資料引用時": [
+              "L. Cadiet, Le principe de loyauté devant le juge civil et le juge commercial, Procédures 2015, dossier 10.",
+              "P. Hurlin-Sanchez, Répartition des sièges dans les intercommunalités, le calme avant la tempête?, CFP 2014, n° 344, 54.",
+              "P. Lagarde, Les principes de base du nouveau règlement européen sur les successions, Rev. Crit. DIP 2014, 700."
+            ],
+            "附帶引用時": [
+              "AJDA 2015, 100.",
+              "CFP 2014, n° 344, 54.",
+              "Comm. com. électr. 2010, repère 10.",
+              "D. 2015, Pan., 100, obs. E. Chevrier.",
+              "JCP G 2006, doctr. 100.",
+              "RLDI 2015/2, n° 100."
+            ]
+          }
         },
         {
           "code": "6.8",
           "name": "專書、研討會論文",
+          "description": "作者|, 篇名|, in 編者（兩人以上則第二人以後皆省略）et a. (dir.)|, 書名或研討會名稱|, 出版年YYYY| 頁.",
           "format": "{$author}, {$articleTitle}, in {$editor}（兩人以上則第二人以後皆省略）et a. (dir.), {$bookOrConferenceTitle}, {$year}, {$page}.",
           "example": "F. Blanco, Les vicissitudes de la conciliation médicale, in C. Castaing et a. (dir.), Mélanges en l’honneur de Jean-Marie Clément, 2014, Les Etudes hospitalières, 23."
         },
         {
           "code": "6.9",
           "name": "專書",
-          "format": "{$authorOrEditor}(dir), {$bookTitle}, {$year}, {$translator}[trad.]（若有）, {$volume}（若有）, {$edition}éd., {$year2}, {$page}.",
+          "description": "作者或編者(dir)|, 書名|, 出版年YYYY|, 譯者（若有）[trad.]|, 卷冊（若有）|, 版次éd.|, 出版年YYYY|, 頁.",
+          "format": "{$author} [Or {$Editor} (dir)], {$bookTitle}, {$translator}[trad.]（若有）, {$volume}（若有）, {$edition} éd., {$year}, {$page}.",
           "example": [
             "P.-Y. Gautier, Propriété littéraire et artistique, vol. 1, 9e éd., 2015, 357.",
             "G. Raymond (dir.), Droit de la consommation, 3e éd., 2015, 456.",
             "P. Mbongo et a. (dir.), Dictionnaire encyclopédique de l’Etat, 2014, 198."
-          ]
+          ],
+          "webNote": "原文件「出版年」出現了兩次，惟法國常見引註格式基本上只在版次後寫上出版年（參見洪望，法語法學文獻引註體例──以法國為樣本，燕大法學教室，10期，頁39，2023年），Ref-Lex 亦同（2026年3月版，頁31規則2.2.1.1），且原文件下述規則6.11也只標註一個出版年。"
         },
         {
           "code": "6.10",
           "name": "學位論文",
+          "description": "作者|, 論文類型thèse/mémoire|, 出版年YYYY|, 出版社或學術機構|, 已出版時的序言作者[préf.]|, 未出版論文的學位名|, 頁.",
           "format": "{$author}, {$thesisType}（thèse/mémoire）, {$year}, {$institutionOrPublisher}, {$prefaceAuthor}[préf.]（已出版時）, {$degreeName}（未出版時）, {$page}.",
           "example": {
             "已出版博士論文": "B. Defoort, La décision administrative, thèse, 2015, LGDJ, 706.",
@@ -1099,15 +1098,17 @@
         {
           "code": "6.11",
           "name": "多人合著",
+          "description": "代表作者（兩人以上則第二人以後皆省略）et a.|, 書名|, 版次éd.|, 出版年YYYY|, 頁.",
           "format": "{$leadAuthor}（兩人以上則第二人以後皆省略）et a., {$bookTitle}, {$edition}éd., {$year}, {$page}.",
           "example": [
             "S. Berre et a., Environnement économique et managérial du notariat, 2014, 301.",
-            "Collectif, Code pénal 2016, 112e éd., 2015, Codes Dalloz.（著者不詳時）"
+            "著者不詳：Collectif, Code pénal 2016, 112e éd., 2015, Codes Dalloz."
           ]
         },
         {
           "code": "6.12",
           "name": "百科全書、彙編類著作",
+          "description": "著作名稱|, 卷|, 冊|, 條目或關鍵字|, 頁或編號|, 作者（若有必要）.",
           "format": "{$workTitle}, {$volume}, {$book}, {$entryOrKeyword}, {$pageOrNumber}, {$author}（若有必要）.",
           "example": [
             "TP TI service pénal, fasc. Tribunal de police, n° 53.",
@@ -1137,8 +1138,10 @@
         {
           "code": "6.14",
           "name": "前註引用",
+          "description": "作者姓(nom), <span class=\"italic\">supra</span> note N|, 頁.",
           "format": "{$authorSurname}, supra note {$noteNumber}, {$page}.",
-          "example": "Hurlin-Sanchez, supra note 23, 55."
+          "example": "Hurlin-Sanchez, supra note 23, 55.",
+          "webNote": "原文件【格式】項下，作者姓後的逗號與斜體 <span class=\"italic\">supra</span> 字樣間並沒有空格，本網站逕予加上。"
         }
       ]
     }
