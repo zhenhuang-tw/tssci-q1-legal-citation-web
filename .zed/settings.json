@@ -1,8 +1,8 @@
 {
   "formatter": {
     "external": {
-      "command": "prettier",
-    },
+      "command": "prettier"
+    }
   },
   "format_on_save": "on",
   "languages": {
@@ -10,41 +10,41 @@
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "prettier",
-        },
-      },
+          "command": "prettier"
+        }
+      }
     },
     "Vue.js": {
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "prettier",
-        },
-      },
+          "command": "prettier"
+        }
+      }
     },
     "TypeScript": {
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "prettier",
-        },
-      },
+          "command": "prettier"
+        }
+      }
     },
     "CSS": {
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "prettier",
-        },
-      },
+          "command": "prettier"
+        }
+      }
     },
     "Markdown": {
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "prettier",
-        },
-      },
-    },
-  },
+          "command": "prettier"
+        }
+      }
+    }
+  }
 }

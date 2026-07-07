@@ -4,9 +4,12 @@ export function useTheme() {
   const colorSchemeQuery = ref<MediaQueryList | null>(null)
 
   function applyTheme(t: 'light' | 'dark' | 'auto') {
-    const resolved = t === 'auto'
-      ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-      : t
+    const resolved =
+      t === 'auto'
+        ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+        : t
     document.documentElement.setAttribute('data-theme', resolved)
   }
 
@@ -17,9 +20,12 @@ export function useTheme() {
   }
 
   function toggleTheme() {
-    const resolved = theme.value === 'auto'
-      ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-      : theme.value
+    const resolved =
+      theme.value === 'auto'
+        ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+        : theme.value
     setTheme(resolved === 'dark' ? 'light' : 'dark')
   }
 

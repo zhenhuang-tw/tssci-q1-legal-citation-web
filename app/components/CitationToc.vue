@@ -5,11 +5,7 @@
         <li v-if="languageFilter.isVisible(cat.code)">
           <a :href="`#${anchorId(cat.code)}`">{{ cat.code }} {{ cat.name || '' }}</a>
           <ol v-if="cat.rule && cat.rule.length > 0 && isActive(cat.code)">
-            <TocItem
-              v-for="child in cat.rule"
-              :key="child.code"
-              :rule="child"
-            />
+            <TocItem v-for="child in cat.rule" :key="child.code" :rule="child" />
           </ol>
         </li>
       </template>

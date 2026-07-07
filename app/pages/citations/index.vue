@@ -19,13 +19,21 @@
     <div class="citations-layout">
       <!-- Desktop TOC: visible sidebar -->
       <div class="toc-desktop">
-        <CitationToc :rules="categories" :language-filter="filter" :active-codes="activeCategoryCodes" />
+        <CitationToc
+          :rules="categories"
+          :language-filter="filter"
+          :active-codes="activeCategoryCodes"
+        />
       </div>
 
       <!-- Mobile TOC: details/summary wrapper -->
       <details class="toc-mobile">
         <summary>目錄</summary>
-        <CitationToc :rules="categories" :language-filter="filter" :active-codes="activeCategoryCodes" />
+        <CitationToc
+          :rules="categories"
+          :language-filter="filter"
+          :active-codes="activeCategoryCodes"
+        />
       </details>
 
       <!-- Main content -->

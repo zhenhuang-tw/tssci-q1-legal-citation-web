@@ -77,11 +77,7 @@
           "code": "2.2",
           "name": "法條",
           "description": "完整表示，請勿使用簡稱或法條符號§。",
-          "example": [
-            "憲法第27條第1項第1款。",
-            "民法第184條第1項前段。",
-            "民法第796條之1。"
-          ]
+          "example": ["憲法第27條第1項第1款。", "民法第184條第1項前段。", "民法第796條之1。"]
         },
         {
           "code": "2.3",
@@ -134,10 +130,7 @@
           "name": "法院判例或決議",
           "description": "完整表示，不需加作成年月，並且判例不需標（舊）。",
           "format": "{$court}{$rocYear}年{$caseType}字第{$number}號{$judgmentType}。或　{$court}{$rocYear}年度第{$number}次{$meetingType}會議。",
-          "example": [
-            "最高法院81年台上字第3521號刑事判例。",
-            "最高法院91年度第14次民事庭會議。"
-          ]
+          "example": ["最高法院81年台上字第3521號刑事判例。", "最高法院91年度第14次民事庭會議。"]
         },
         {
           "code": "2.7",
@@ -351,7 +344,7 @@
               "type": "UN",
               "example": "United Nations General Assembly, <span class=\"italic\">Restoration of the lawful rights of the People’s Republic of China in the United Nations</span>, GA Res 2758 (XXVI), UN Doc A/RES/2758(XXVI) (25 October 1971)."
             }
-		      ]
+          ]
         },
         {
           "code": "3.3",
@@ -532,9 +525,7 @@
               "BVerfGE 115, 320, 324 ff.",
               "BVerfG, DÖV 2008, 56, 57."
             ],
-            "複數判決引用範例": [
-              "BVerfG, DÖV 2008, 56, 57; DÖV 2012, 12; DÖV 2025, 56, 57."
-            ]
+            "複數判決引用範例": ["BVerfG, DÖV 2008, 56, 57; DÖV 2012, 12; DÖV 2025, 56, 57."]
           }
         },
         {
@@ -615,10 +606,7 @@
           "code": "4.12",
           "name": "議會公報",
           "format": "{$documentName}+{$fileNumber}, S. {$page}.",
-          "example": [
-            "Plenarprotokoll des Bundesrates 4/2025, S. 105.",
-            "BT-Drs. 18/9097, S. 30."
-          ]
+          "example": ["Plenarprotokoll des Bundesrates 4/2025, S. 105.", "BT-Drs. 18/9097, S. 30."]
         },
         {
           "code": "4.13",
@@ -636,10 +624,7 @@
               "name": "柏拉圖（Stephanus-Paginierung）",
               "description": "著作名（可縮寫）+Stephanus版中的引用頁+段落（a, b, c, d）+行數（非必要）。由於理想國（Politeia）與法律篇（Nomoi）篇幅較大，引用時會以羅馬數字標示引用頁所在的書號。",
               "format": "{$workAbbrev} {$stephanusPage}{$paragraph}{$line}",
-              "example": [
-                "Politikos 268e7",
-                "Politeia VI 509b9"
-              ]
+              "example": ["Politikos 268e7", "Politeia VI 509b9"]
             },
             {
               "code": "4.14.2",
@@ -823,9 +808,7 @@
             {
               "code": "5.7.1",
               "name": "一般",
-              "description": [
-                "一般格式如下，但下列特殊類型請參照範例。"
-              ],
+              "description": ["一般格式如下，但下列特殊類型請參照範例。"],
               "format": "{$author}「{$articleTitle}」{$editor}編『{$bookTitle}』{$page}頁(発行年{$year})。",
               "example": "岡部喜代子｢共同相続財産の占有をめぐる諸問題｣野田愛子ほか編『新家族法実務大系〔３〕相続〔１〕相続・遺産分割』137頁(2008)。"
             },
@@ -845,18 +828,14 @@
             {
               "code": "5.7.3",
               "name": "註釋書（參照獨著）",
-              "description": [
-                "一般格式如下，但下列特殊類型請參照範例。"
-              ],
+              "description": ["一般格式如下，但下列特殊類型請參照範例。"],
               "format": "{$editor}編『{$commentaryTitle}』{$page}頁〔{$author}執筆〕({$year})。",
               "example": "江頭憲治郎編『会社法コンメンタール６—新株予約権§§236–294』16頁〔江頭憲治郎執筆〕(2009)。"
             },
             {
               "code": "5.7.4",
               "name": "祝賀論文集",
-              "description": [
-                "一般格式如下，但下列特殊類型請參照範例。"
-              ],
+              "description": ["一般格式如下，但下列特殊類型請參照範例。"],
               "format": "{$author}｢{$articleTitle}｣{$honoree}先生古稀記念『{$bookTitle}』{$page}頁({$year})。",
               "example": "平井宜雄｢債権者代位権の理論的位置—解約返戻金支払請求権の差押および代位請求を手がかりとして｣加藤一郎先生古稀記念『現代社会と民法学の動向〔下〕—民法一般』223頁(1992)。"
             }
@@ -1035,11 +1014,7 @@
           "code": "6.6",
           "name": "裁判彙編",
           "format": "{$reporterAbbrev}, {$year或volume}, {$page或number}",
-          "example": [
-            "Rec. Cons. const., 2014, 104",
-            "Bull. civ. II, n° 12",
-            "Lebon, 512"
-          ]
+          "example": ["Rec. Cons. const., 2014, 104", "Bull. civ. II, n° 12", "Lebon, 512"]
         },
         {
           "code": "6.7",

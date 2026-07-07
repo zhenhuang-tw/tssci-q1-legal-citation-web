@@ -14,12 +14,12 @@
 
 ## Tech Stack
 
-| 層次 | 技術 |
-|------|------|
-| 框架 | Nuxt |
+| 層次     | 技術            |
+| -------- | --------------- |
+| 框架     | Nuxt            |
 | 內容管理 | Nuxt Content V3 |
-| UI | Pico CSS |
-| 套件管理 | PNPM |
+| UI       | Pico CSS        |
+| 套件管理 | PNPM            |
 
 ## 目錄結構
 

@@ -12,10 +12,7 @@
       </header>
 
       <template v-if="rule.description">
-        <p
-          v-for="(line, i) in asDescriptionArray(rule.description)"
-          :key="i"
-        >
+        <p v-for="(line, i) in asDescriptionArray(rule.description)" :key="i">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="line" />
         </p>
@@ -53,11 +50,7 @@
       </template>
 
       <!-- Children (level 3+) -->
-      <RuleDescendant
-        v-for="child in rule.rule"
-        :key="child.code"
-        :rule="child"
-      />
+      <RuleDescendant v-for="child in rule.rule" :key="child.code" :rule="child" />
 
       <footer v-if="rule.webNote">
         <small>📝 {{ rule.webNote }}</small>

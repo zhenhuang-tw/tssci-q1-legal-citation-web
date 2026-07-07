@@ -19,10 +19,7 @@
         {{ rule.code }} {{ rule.name }}
       </component>
 
-      <p
-        v-for="(line, i) in asDescriptionArray(rule.description)"
-        :key="i"
-      >
+      <p v-for="(line, i) in asDescriptionArray(rule.description)" :key="i">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-html="line" />
       </p>
@@ -47,11 +44,7 @@
       </template>
 
       <!-- Recursive children -->
-      <RuleDescendant
-        v-for="child in rule.rule"
-        :key="child.code"
-        :rule="child"
-      />
+      <RuleDescendant v-for="child in rule.rule" :key="child.code" :rule="child" />
     </template>
   </div>
 </template>

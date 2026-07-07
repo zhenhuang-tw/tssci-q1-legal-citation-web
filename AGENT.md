@@ -7,14 +7,14 @@
 
 ## Tech Stack
 
-| 項 | 值 |
-|---|-----|
-| 框架 | Nuxt 4（`app/` 目錄結構，`compatibilityVersion: 4`） |
-| 內容 | Nuxt Content V3（`@nuxt/content`，主要用於 JSON import） |
-| CSS | Pico CSS **class-less** |
-| 語言 | TypeScript（`strict: true`） |
-| 套件管理 | PNPM |
-| 格式化 | Prettier（`.prettierrc` 控制） |
+| 項       | 值                                                       |
+| -------- | -------------------------------------------------------- |
+| 框架     | Nuxt 4（`app/` 目錄結構，`compatibilityVersion: 4`）     |
+| 內容     | Nuxt Content V3（`@nuxt/content`，主要用於 JSON import） |
+| CSS      | Pico CSS **class-less**                                  |
+| 語言     | TypeScript（`strict: true`）                             |
+| 套件管理 | PNPM                                                     |
+| 格式化   | Prettier（`.prettierrc` 控制）                           |
 
 ---
 
@@ -64,14 +64,14 @@ content/
 
 ```typescript
 interface CitationRule {
-  code: string                              // 階層編號，如 "2.7.1"
-  name?: string                             // 人類可讀名稱（純描述性子規則可省略）
-  description?: string | string[]           // 官方【格式】說明
-  format?: string | string[]                // {$var} CSL 模板（可 machine-readable 時才出現）
+  code: string // 階層編號，如 "2.7.1"
+  name?: string // 人類可讀名稱（純描述性子規則可省略）
+  description?: string | string[] // 官方【格式】說明
+  format?: string | string[] // {$var} CSL 模板（可 machine-readable 時才出現）
   example?: string | string[] | Record<string, string | string[]>
   multipleTypeExample?: { type: string; example: string[] }[]
-  webNote?: string                          // 本專案補充說明（使用者自行添加，官方文件所無）
-  rule?: CitationRule[]                     // 子規則（遞迴）
+  webNote?: string // 本專案補充說明（使用者自行添加，官方文件所無）
+  rule?: CitationRule[] // 子規則（遞迴）
 }
 ```
 
@@ -92,6 +92,7 @@ interface CitationRule {
 ### 4. Pico CSS class-less 原則
 
 `main.css` **不得使用 class-based 選擇器**。僅可使用：
+
 - 元素選擇器（`body`、`details`、`mark`）
 - 屬性選擇器（`nav[aria-label='頁面大綱']`）
 - CSS 自訂變數（`var(--pico-color-*)`）
@@ -117,6 +118,7 @@ Component template 中的 class 僅為語義標記，不應在 `main.css` 中被
 ### example 欄位的多型
 
 `rule.example` 的型別可能為：
+
 - `string` — 單一範例
 - `string[]` — 多條範例
 - `Record<string, string | string[]>` — 分類範例（如 `{ "已出版博士論文": "...", "已出版有序言": "..." }`）
@@ -153,6 +155,7 @@ Component template 中的 class 僅為語義標記，不應在 `main.css` 中被
 ### 全形／半形校對
 
 日文文獻對符號精度要求極高。修改內容後建議在瀏覽器中實際檢視，確認：
+
 - 全形破折號（`—`）未誤判為長音符（`ー`）或漢字「一」
 - 中黑點（`・`）未誤判為其他符號
 - 括號全半形符合規則要求

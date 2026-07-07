@@ -69,7 +69,7 @@ export default defineNuxtConfig({
         provider: 'bunny',
         weights: [500, 700],
         styles: ['normal'],
-      }
+      },
     ],
   },
 })
