@@ -938,8 +938,7 @@
                   "example": [
                     "L. n° 2016-162, 19 févr. 2016, prorogeant l’application de la loi n° 55-385 du 3 avril 1955 relative à l’état d’urgence, NOR: INTX1602418L: JO n° 0043, 20 févr. 2016",
                     "CE, 9 nov. 2015, n° 342468, SAS constructions mécaniques de Normandie: AJDA 2015, 100; D. 2015, Pan., 100, obs. E. Chevrier; RLDI 2015/2, n° 100"
-                  ],
-                  "webNote": "原文件的這兩個範例間，並沒有區隔，本網站逕予區隔。"
+                  ]
                 },
                 {
                   "code": "6.1.3.3",
@@ -949,7 +948,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "webNote": "原文件 6.1.3.2 兩個範例間，並沒有區隔，本網站逕予區隔。"
         },
         {
           "code": "6.2",
@@ -1140,8 +1140,8 @@
           "name": "前註引用",
           "description": "作者姓(nom), <span class=\"italic\">supra</span> note N|, 頁.",
           "format": "{$authorSurname}, supra note {$noteNumber}, {$page}.",
-          "example": "Hurlin-Sanchez, supra note 23, 55.",
-          "webNote": "原文件【格式】項下，作者姓後的逗號與斜體 <span class=\"italic\">supra</span> 字樣間並沒有空格，本網站逕予加上。"
+          "example": "Hurlin-Sanchez, <span class=\"italic\">supra</span> note 23, 55.",
+          "webNote": "原文件【格式】項下，作者姓後的逗號與斜體 supra 字樣間並沒有空格，本網站逕予加上。"
         }
       ]
     }
