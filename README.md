@@ -2,7 +2,7 @@
 
 > 本專案不是由國科會或法律學門各 TSSCI 一級期刊提供，只整理其公告的引註格式，建立非官方檢索平台，方便參考。如有疑義，請以官方公告文件為準。
 
-各 TSSCI 一級期刊[統一公告文件](https://drive.google.com/drive/u/0/folders/15uWIodb8D7JFNnkctlm2OcJ4TWUha6dv)（2026年5月18日修訂，取自召集人孫迺翊老師 FB 留言）
+各 TSSCI 一級期刊協同公告之文件，請點[統一公告文件](https://drive.google.com/drive/u/0/folders/15uWIodb8D7JFNnkctlm2OcJ4TWUha6dv)查看（2026 年 5 月 18 日修訂，連結取自召集人孫迺翊老師 FB 留言）。
 
 ## 專案簡介
 
